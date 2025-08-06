@@ -1,0 +1,35 @@
+
+{%- extends '_atoms/images/_image--props' -%}
+
+{%- block image -%}
+
+{%- set id = "content-#{random()}-#{props.get('image').id}" -%}
+
+{%- set image = props.get('image') ??? null -%}
+{%- set caption = props.get('caption') ??? null -%}
+
+{% minify %}
+<figure>
+{{ image.imageTeaserOptimized.pictureTag()
+  .imgAttrs
+    ({
+      'sizes': props.get('sizes'),
+      'alt': props.get('alt') ??? image.title ??? null,
+      'class': "object-cover aspect-video #{props.get('utilitiesImage')}",
+    })
+  .pictureAttrs
+    ({
+       'class': props.get('utilitiesPicture'),
+       'id': id
+    })
+  .placeholder("#{props.get('placeholder')}")
+  .loadingStrategy("#{props.get('loadingStrategy')}")
+  .render()
+}}
+{% endminify %}
+  {% if caption %}
+    <figcaption>{{ caption }}</figcaption>
+  {% endif %}
+</figure>
+
+{%- endblock -%}

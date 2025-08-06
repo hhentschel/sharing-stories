@@ -1,0 +1,265 @@
+dateModified: 1751313671
+elementSources:
+  craft\elements\Entry:
+    -
+      key: '*'
+      type: native
+    -
+      key: singles
+      type: native
+    -
+      heading: Kanäle
+      type: heading
+    -
+      key: 'section:e59a750b-bacf-4308-8042-1d484a6248ac' # Blog
+      type: native
+    -
+      heading: Strukturen
+      type: heading
+    -
+      defaultSort:
+        - structure
+        - asc
+      disabled: false
+      key: 'section:0e3ab7e8-caf3-452c-8e42-b55d64f24026' # Artikel Tech
+      tableAttributes:
+        - status
+        - postDate
+        - expiryDate
+        - authors
+        - link
+        - 'field:bdf32217-a781-41f4-8a9d-ba623b04e90a' # Image Content
+        - revisionCreator
+        - dateUpdated
+        - dateCreated
+        - revisionNotes
+      type: native
+    -
+      key: 'section:e68167e4-15ab-4aee-93ff-881ea72b1cad' # Artikel Konzept
+      type: native
+    -
+      key: 'section:86f4b979-439d-4d67-8e6d-053a5ddf4c89' # Pages
+      type: native
+    -
+      heading: ''
+      type: heading
+  craft\elements\User:
+    -
+      defaultSort:
+        - username
+        - asc
+      disabled: false
+      key: '*'
+      tableAttributes:
+        - status
+        - fullName
+        - email
+        - dateCreated
+        - lastLoginDate
+        - preferredLocale
+      type: native
+email:
+  fromEmail: p@henrik-hentschel.de
+  fromName: CraftDev
+  transportType: craft\mail\transportadapters\Sendmail
+fs:
+  contentimages:
+    hasUrls: true
+    name: 'Content Images'
+    settings:
+      addSubfolderToRootUrl: true
+      autoFocalPoint: false
+      bucket: $S3_BUCKET
+      bucketSelectionMode: manual
+      cfDistributionId: $CLOUDFRONT_IO_DISTRIBUTION_ID
+      cfPrefix: ''
+      expires: '1 years'
+      keyId: $S3_ACCESS_KEY
+      makeUploadsPublic: false
+      region: $S3_REGION
+      secret: $S3_SECRET_KEY
+      storageClass: ''
+      subfolder: content-images/
+    type: craft\awss3\Fs
+    url: $CLOUDFRONT_IO_URL
+  heroImages:
+    hasUrls: true
+    name: 'Hero Images'
+    settings:
+      addSubfolderToRootUrl: true
+      autoFocalPoint: false
+      bucket: $S3_BUCKET
+      bucketSelectionMode: manual
+      cfDistributionId: $CLOUDFRONT_IO_DISTRIBUTION_ID
+      cfPrefix: ''
+      expires: '1 years'
+      keyId: $S3_ACCESS_KEY
+      makeUploadsPublic: false
+      region: $S3_REGION
+      secret: $S3_SECRET_KEY
+      storageClass: ''
+      subfolder: ''
+    type: craft\awss3\Fs
+    url: $CLOUDFRONT_IO_URL
+  teaserImages:
+    hasUrls: true
+    name: 'Teaser Images'
+    settings:
+      addSubfolderToRootUrl: true
+      autoFocalPoint: false
+      bucket: $S3_BUCKET
+      bucketSelectionMode: manual
+      cfDistributionId: $CLOUDFRONT_IO_DISTRIBUTION_ID
+      cfPrefix: ''
+      expires: '1 years'
+      keyId: $S3_ACCESS_KEY
+      makeUploadsPublic: false
+      region: $S3_REGION
+      secret: $S3_SECRET_KEY
+      storageClass: ''
+      subfolder: teaser-images
+    type: craft\awss3\Fs
+    url: $CLOUDFRONT_IO_URL
+meta:
+  __names__:
+    0e3ab7e8-caf3-452c-8e42-b55d64f24026: 'Artikel Tech' # Artikel Tech
+    1ecc4fa4-7e2d-4364-b61c-3a77a8f22390: 'Footer Content' # Footer Content
+    2a3500d7-9902-4400-9a6d-7564e565cd9d: 'Feature List' # Feature List
+    2b282624-7e65-477f-b41e-be03e7181f7f: Feature # Feature
+    3afe3600-f29a-4409-9b22-764f71a881c5: 'Rich Text' # Rich Text
+    3bc6942f-4e9a-4317-bb3c-72468b36c388: Feature # Feature
+    4a627350-c333-49de-978e-b756cd988db7: Home # Home
+    5ba7464f-2767-483b-8cdb-a89f28b8c6cf: 'Image Teaser' # Image Teaser
+    5c8dd4ed-8488-4d87-b11b-af5c7d46da6e: 'Longform Content' # Longform Content
+    6a8579a0-7f72-41c9-9a9b-4d6d4f5ad746: 'Content Builder' # Content Builder
+    7f7786f6-16c1-492d-a101-0056402404ef: 'Image Teaser Optimized' # Image Teaser Optimized
+    9dc35b77-87de-4411-91b1-05d093c994b9: Caption # Caption
+    9f8d5177-949f-420b-be9a-2f552d514a68: Images # Images
+    26db054c-db10-4316-b753-0544f54f6710: 'Related Entries' # Related Entries
+    84ce4835-15b6-4400-af9c-f2815a462fb3: 'Related Entries' # Related Entries
+    84dcc5df-eba0-4369-b9d6-d82865740798: 'Simple Name Value Table' # Simple Name Value Table
+    86f4b979-439d-4d67-8e6d-053a5ddf4c89: Pages # Pages
+    99a58225-3f4f-4a3b-a338-35e1fda743ef: CraftDev # CraftDev
+    287f6c8e-3c73-4ee3-9936-cbdaa3ba25fc: Position # Position
+    607df1b9-7f1f-461d-85ae-8ff854552412: Footer # Footer
+    1230e3f3-1ac1-4b89-9150-35cbf1f39ff2: 'Image Hero Optimized' # Image Hero Optimized
+    7601d3fa-9b2e-43fb-9b7a-d31bdc9d1e90: Tabelle # Tabelle
+    9522a7a6-0ee3-42e2-a4b4-bd2f691c2c4d: Blog # Blog
+    867399f9-5cee-4f95-836b-a04cc7bc2639: Header # Header
+    72555363-9815-48cd-bcce-d855765e7d66: 'Plain Text' # Plain Text
+    73392818-36d0-419a-a731-d65ac4927ebc: 'Public Schema' # Public Schema
+    a2c173c5-4b31-4338-86ee-a0cb4aafc12b: Home # Home
+    b3f3c321-3167-4f74-8f3e-a3a6a7b75f96: Description # Description
+    b770f7e5-3411-4c52-91e3-c5929d334207: CraftDev # CraftDev
+    b64266e0-f780-4789-82af-577ebebb1372: Footer # Footer
+    bdf32217-a781-41f4-8a9d-ba623b04e90a: 'Image Content' # Image Content
+    c3a6b49e-2ca2-47c0-b154-7eb46f85bd2f: Header # Header
+    c21ecef0-860f-40a8-be9f-b182cc90ff2c: Nummernfeld # Nummernfeld
+    c55ca0a9-4bd6-409b-afd8-c1884dafecd0: Team # Team
+    ca23ec94-c45c-4713-b3e5-5d8de0457e74: 'ImageOptimize - Hero' # ImageOptimize - Hero
+    ca82ce19-1d0f-494a-b0e9-79eab0ba3665: CTA # CTA
+    cbacf1e2-321f-4024-a6b0-5159a7fa227c: 'ImageOptimize - Content' # ImageOptimize - Content
+    ce11b004-8f79-48e1-b31b-dbcea3a241bb: Icon # Icon
+    db52a890-e4be-4edb-b995-2b4d3aee70a4: Überschrift # Überschrift
+    e2f3b30c-2b00-465f-b42b-5b8e8e0ab107: 'Rich Text' # Rich Text
+    e3a20fd6-f305-4542-8ad7-f6ed6607137d: 'ImageOptimize - Teaser' # ImageOptimize - Teaser
+    e57dd80e-fbbb-45c8-9086-b5a5368c2429: 'Image Hero' # Image Hero
+    e59a750b-bacf-4308-8042-1d484a6248ac: Blog # Blog
+    e96d7c98-3659-4dac-834a-9b3875e19d3b: Simple # Simple
+    e68167e4-15ab-4aee-93ff-881ea72b1cad: 'Artikel Konzept' # Artikel Konzept
+    eda1d68b-3d84-43a4-8e0b-88fccb194079: 'Image Content Optimized' # Image Content Optimized
+    f53223cc-170a-472c-9561-2f22df16bc96: 'Longform Content' # Longform Content
+    fa933347-d51c-4fd4-b944-cdc378d3dde8: Footer # Footer
+    fab38811-fef1-4fc7-a7d4-7aeb3437eb35: 'CTA Url' # CTA Url
+    fc95636f-567a-49fe-a410-86de9a5ea3cc: Landingpage # Landingpage
+    fedb00ce-c6fb-4ef7-ba11-7c52ac8a5510: Blog-Overview # Blog-Overview
+    fff166a9-5cfa-4eb2-aa7c-52a2f34b8a47: 'CTA Text' # CTA Text
+plugins:
+  aws-s3:
+    edition: standard
+    enabled: true
+    schemaVersion: '2.0'
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0.0
+  cp-field-inspect:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  empty-coalesce:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  image-optimize:
+    edition: standard
+    enabled: true
+    licenseKey: IK1W8HDR7QSTOFREMNEVPXEC
+    schemaVersion: 1.0.0
+    settings:
+      allowUpScaledImageVariants: false
+      assetVolumeSubFolders: true
+      autoSharpenScaledImages: true
+      capSilhouetteSvgSize: true
+      createColorPalette: true
+      createPlaceholderSilhouettes: true
+      imageTransformTypeSettings:
+        __assoc__:
+          -
+            - nystudio107\imageoptimizeimgix\imagetransforms\ImgixImageTransform
+            -
+              __assoc__:
+                -
+                  - domain
+                  - ''
+                -
+                  - apiKey
+                  - ''
+                -
+                  - securityToken
+                  - ''
+                -
+                  - unsharpMask
+                  - '20'
+          -
+            - nystudio107\imageoptimizesharp\imagetransforms\SharpImageTransform
+            -
+              __assoc__:
+                -
+                  - baseUrl
+                  - $CLOUDFRONT_IO_URL
+          -
+            - nystudio107\imageoptimizethumbor\imagetransforms\ThumborImageTransform
+            -
+              __assoc__:
+                -
+                  - baseUrl
+                  - ''
+                -
+                  - securityKey
+                  - ''
+                -
+                  - includeBucketPrefix
+                  - ''
+      lowerQualityRetinaImageVariants: true
+      sharpenScaledImagePercentage: 50
+      transformClass: nystudio107\imageoptimizesharp\imagetransforms\SharpImageTransform
+  minify:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  typogrify:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  vite:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+system:
+  edition: solo
+  live: true
+  name: Sharing-Stories
+  retryDuration: null
+  schemaVersion: 5.7.0.3
+  timeZone: America/Los_Angeles

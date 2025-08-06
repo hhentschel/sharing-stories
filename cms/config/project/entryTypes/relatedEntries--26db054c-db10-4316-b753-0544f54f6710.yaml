@@ -1,0 +1,65 @@
+color: sky
+fieldLayouts:
+  c1273443-6b2a-4441-bd9a-ef3fc0dca3ca:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 4365ef09-126c-4cc1-8aa6-29569446ab60
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 84ce4835-15b6-4400-af9c-f2815a462fb3 # Related Entries
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f83a0979-c56b-4d0f-a0b9-46b061fceb66
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: fc50f0c3-6adc-4116-a0f8-af18acb6dc65
+        userCondition: null
+handle: relatedEntries
+hasTitleField: true
+icon: list-timeline
+name: 'Related Entries'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

@@ -1,0 +1,231 @@
+{%- extends '_boilerplate/_layouts/generic-page-layout.twig' -%}
+{%- import '_macros/atomic' as atoms -%}
+
+{% block headLinks %}
+    {{ parent() }}
+{% endblock headLinks %}
+
+{% block content %}
+    {{ parent() }}
+    <div class="p-10 flex flex-wrap gap-8">
+
+
+        {{- atoms.atom('text', 'content', {
+            content: 'Lorem Porta',
+            utilities: '',
+        }) -}}
+
+        {{- atoms.atom('text', 'quote', {
+            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            utilities: 'text-teal-600',
+        }) -}}
+
+        {{- atoms.atom('form', 'label', {
+            content: 'Label',
+            utilities: 'text-orange-600',
+        }) -}}
+
+         {{- atoms.atom('button', 'primary', {
+            text: 'Button',
+            url: 'https://google.ch',
+            utilities: '',
+        }) -}}
+
+         {{- atoms.atom('button', 'primary', {
+            text: 'Button',
+            url: 'https://google.ch',
+            utilities: '',
+            icon: {type: 'fa-solid', icon: 'fa-house' },
+        }) -}}
+
+         {{- atoms.atom('button', 'primary', {
+            text: 'Button',
+            url: 'https://google.ch',
+            utilities: 'bg-purple-500',
+            icon: {type: 'fa-solid', icon: 'fa-paper-plane', color: 'orange', size: '7xl'},
+            iconPosition: 'after',
+        }) -}}
+
+         {{- atoms.atom('button', 'primary', {
+            text: 'Button',
+            url: 'https://google.ch',
+            utilities: '',
+            icon: {type: 'fa-solid', icon: 'fa-star' },
+            iconPosition: 'before',
+        }) -}}
+
+         {{- atoms.atom('button', 'primary', {
+            text: 'Button',
+            url: 'https://google.ch',
+            utilities: '',
+            icon: {type: 'fa-solid', icon: 'fa-user' },
+            iconPosition: 'before',
+        }) -}}
+
+         {{- atoms.atom('button', 'primary', {
+            text: 'Button',
+            url: 'https://google.ch',
+            utilities: '',
+            icon: {type: 'fa-solid', icon: 'fa-paper-plane' },
+            iconPosition: 'after',
+        }) -}}
+
+         {{- atoms.atom('button', 'primary', {
+            text: 'Button',
+            url: 'https://google.ch',
+            utilities: '',
+        }) -}}
+
+         {{- atoms.atom('button', 'primary', {
+            text: 'Button',
+            url: 'https://google.ch',
+            utilities: '',
+        }) -}}
+
+         {{- atoms.atom('button', 'primary', {
+            text: 'Button',
+            url: 'https://google.ch',
+            utilities: '',
+        }) -}}
+
+         {{- atoms.atom('button', 'primary', {
+            text: 'Button',
+            url: 'https://google.ch',
+            utilities: '',
+        }) -}}
+
+         {{- atoms.atom('button', 'primary', {
+            text: 'Button',
+            url: 'https://google.ch',
+            utilities: '',
+        }) -}}
+
+         {{- atoms.atom('button', 'primary', {
+            text: 'Button',
+            url: 'https://google.ch',
+            utilities: '',
+        }) -}}
+
+         {{- atoms.atom('button', 'primary', {
+            text: 'Button',
+            url: 'https://google.ch',
+            utilities: '',
+        }) -}}
+
+         {{- atoms.atom('button', 'primary', {
+            text: 'Button',
+            url: 'https://google.ch',
+            utilities: '',
+        }) -}}
+        {# {{ country_names()|join(',') }} #}
+    </div>
+
+
+        <div class="flex justify-center">
+            {# {{- atoms.atom('image', 'content',  {
+                image: entry.imageContent.eagerly.collect.first
+            }) -}} #}
+        </div>
+
+        <div class="p-10 flex flex-wrap gap-8">
+
+        {{- atoms.atom('button', 'primary', {
+            text: 'Button',
+            url: 'https://google.ch',
+            utilities: '',
+        }) -}}
+
+         {{- atoms.atom('button', 'primary', {
+            text: 'Button',
+            url: 'https://google.ch',
+            utilities: '',
+            icon: {type: 'fa-solid', icon: 'fa-house' },
+
+        }) -}}
+
+         {{- atoms.atom('button', 'primary', {
+            text: 'Button',
+            url: 'https://google.ch',
+            utilities: 'bg-purple-500',
+            icon: {type: 'fa-solid', icon: 'fa-paper-plane', color: 'orange', size: '7xl'},
+            iconPosition: 'after',
+        }) -}}
+
+         {{- atoms.atom('button', 'primary', {
+            text: 'Button',
+            url: 'https://google.ch',
+            utilities: '',
+            icon: {type: 'fa-solid', icon: 'fa-paper-plane' },
+            iconPosition: 'before',
+        }) -}}
+
+         {{- atoms.atom('button', 'primary', {
+            text: 'Button',
+            url: 'https://google.ch',
+            utilities: '',
+        }) -}}
+
+         {{- atoms.atom('button', 'primary', {
+            text: 'Button',
+            url: 'https://google.ch',
+            utilities: '',
+            icon: {type: 'fa-solid', icon: 'fa-paper-plane' },
+            iconPosition: 'after',
+        }) -}}
+
+         {{- atoms.atom('button', 'primary', {
+            text: 'Button',
+            url: 'https://google.ch',
+            utilities: '',
+        }) -}}
+
+         {{- atoms.atom('button', 'primary', {
+            text: 'Button',
+            url: 'https://google.ch',
+            utilities: '',
+        }) -}}
+
+         {{- atoms.atom('button', 'primary', {
+            text: 'Button',
+            url: 'https://google.ch',
+            utilities: '',
+        }) -}}
+
+         {{- atoms.atom('button', 'primary', {
+            text: 'Button',
+            url: 'https://google.ch',
+            utilities: '',
+        }) -}}
+
+         {{- atoms.atom('button', 'primary', {
+            text: 'Button',
+            url: 'https://google.ch',
+            utilities: '',
+        }) -}}
+
+         {{- atoms.atom('button', 'primary', {
+            text: 'Button',
+            url: 'https://google.ch',
+            utilities: '',
+        }) -}}
+
+         {{- atoms.atom('button', 'primary', {
+            text: 'Button',
+            url: 'https://google.ch',
+            utilities: '',
+        }) -}}
+
+         {{- atoms.atom('button', 'primary', {
+            text: 'Button',
+            url: 'https://google.ch',
+            utilities: '',
+        }) -}}
+        {# {{ country_names()|join(',') }} #}
+    </div>
+
+{% endblock %}
+
+{# -- Any JavaScript that should be included before </body> -- #}
+{% block bodyJs %}
+    {{ parent() }}
+{% endblock bodyJs %}

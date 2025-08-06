@@ -1,0 +1,22 @@
+{%- import '_macros/atomic' as atoms -%}
+
+<div class="container bg-cyan-100">
+
+    {{ entry.title }}
+
+    <div class="">
+        {{ entry.HomeContent }}
+
+        <div class="">
+            {{- atoms.atom('image', 'hero',  {
+                image: entry.imageHero.eagerly().collect.first,
+                sizes: '30vw',
+                placeholder: 'silhouette',
+                loadingStrategy: 'eager',
+                utilities: ''
+            }) -}}
+        </div>
+    </div>
+</div>
+
+

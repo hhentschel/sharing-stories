@@ -1,0 +1,65 @@
+color: blue
+fieldLayouts:
+  03ce300d-cacd-41b0-aa31-666ee486e43c:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 9e7b263b-248d-4773-b8eb-7ae0a3745f19
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 84dcc5df-eba0-4369-b9d6-d82865740798 # Simple Name Value Table
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e48167eb-a76f-4fba-9916-1e4355a57121
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: f9e67dcb-c782-42c8-ac01-74709defb3b0
+        userCondition: null
+handle: table
+hasTitleField: true
+icon: table
+name: Tabelle
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

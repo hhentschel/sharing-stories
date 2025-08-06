@@ -1,0 +1,31 @@
+
+{%- extends '_atoms/images/_image--props' -%}
+
+{%- block image -%}
+
+{%- set image = props.get('image') ??? null -%}
+{# {%- set id = "content-#{random()}-#{props.get('image').id}" -%} #}
+
+
+{% minify %}
+{% if image %}
+{{ image.imageHeroOptimized.pictureTag()
+  .imgAttrs
+    ({
+      'sizes': props.get('sizes'),
+      'alt': props.get('alt') ??? image.title ??? null,
+      'class': "object-cover #{props.get('utilitiesImage')}",
+      'fetchpriority': 'high'
+    })
+  .pictureAttrs
+    ({
+       'class': props.get('utilitiesPicture'),
+    })
+  .placeholder("#{props.get('placeholder')}")
+  .loadingStrategy("#{props.get('loadingStrategy')}")
+  .render()
+}}
+{% endif %}
+{% endminify %}
+
+{%- endblock -%}
