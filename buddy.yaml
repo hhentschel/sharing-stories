@@ -1,4 +1,4 @@
-- pipeline: "Craftdev: Build & Deploy to Staging"
+- pipeline: "Sharing-Stories: Build & Deploy to Production"
   trigger_mode: "ON_EVERY_PUSH"
   ref_name: "develop"
   ref_type: "BRANCH"
@@ -95,7 +95,7 @@
         - "# Turn Craft off"
         - "php craft off --retry=60"
         - "# Restart our long running queue listener process. Cannot be done here, must be done within ploi. with curl restart the daemon via ploi deploy script"
-        - "curl -X POST https://ploi.io/webhooks/servers/74284/sites/227068/deploy?token=yEThroTfkp4if0ccWcDg5Uf61lgbenY5M6oc3xFdsIziu2RyYi&direct=true"
+        - "# curl -X POST https://ploi.io/webhooks/servers/74284/sites/227068/deploy?token=yEThroTfkp4if0ccWcDg5Uf61lgbenY5M6oc3xFdsIziu2RyYi&direct=true"
         - "# Backup the database just in case any migrations or Project Config changes have issues"
         - "php craft db/backup"
         - "# Clear caches"
@@ -116,7 +116,7 @@
       authentication_mode: "WORKSPACE_KEY"
       commands:
         - "# Reload our PHP process"
-        - 'echo "" | sudo -S service php8.3-fpm reload'
+        - 'echo "" | sudo -S service php8.4-fpm reload'
       trigger_condition: "ALWAYS"
       run_as_script: true
       shell: "SH"
@@ -124,10 +124,10 @@
     - key: "PROJECT_SHORTNAME"
       value: "craft"
     - key: "PROJECT_URL"
-      value: "https://staging.craftstart.henrik-hentschel.de"
+      value: "https://sharing-stories.net"
     - key: "REMOTE_PROJECT_ROOT"
-      value: "/home/ploi/staging.craftstart.henrik-hentschel.de"
+      value: "/home/ploi/sharing-stories.net"
     - key: "REMOTE_SSH_WEB"
-      value: "116.202.14.186"
+      value: "91.99.80.62"
     - key: "REMOTE_SSH_USER"
       value: "ploi"
