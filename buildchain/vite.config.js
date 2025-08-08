@@ -28,7 +28,7 @@ export default defineConfig(({command}) => ({
   },
   plugins: [
     critical({
-      criticalUrl: 'https://google.com',
+      criticalUrl: 'https://sharing-stories.net/',
       criticalBase: '../web/dist/criticalcss/',
       criticalPages: [
         {
