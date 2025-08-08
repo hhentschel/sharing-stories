@@ -5,7 +5,9 @@
 
 {% block header %}
     {{- organisms.organism('header', 'content', {
-        content: 'Header',
+        content: '
+            <h1 class="text-3xl font-bold text-orange-900">{{ entry.title }}</h1>
+            <p class="mt-2 text-lg text-gray-700">{{ entry.description }}</p>',
         color: 'text-orange-900',
         utilities: 'bg-teal-200',
     }) -}}
