@@ -1,0 +1,89 @@
+{# Formats all dates accordingly #}
+{%- macro format_date(date) -%}
+	{%- apply spaceless -%}
+		{{- date|date('d/m/Y') -}}
+	{%- endapply -%}
+{%- endmacro -%}
+
+{%- macro format_date_long(date) -%}
+	{%- apply spaceless -%}
+		{{- date|date('j F, Y') -}}
+	{%- endapply -%}
+{%- endmacro -%}
+
+{# Formats all times from date accordingly #}
+{%- macro format_time(date) -%}
+    {%- apply spaceless -%}
+        {{- date|date('H:i') -}}
+    {%- endapply -%}
+{%- endmacro -%}
+
+{# Formats all datetimes from date accordingly #}
+{%- macro format_datetime(date, bullet = true) -%}
+    {%- apply spaceless -%}
+        {{- bullet ? date|date('d/m/Y • H:i') : date|date('d/m/Y H:i') -}}
+    {%- endapply -%}
+{%- endmacro -%}
+
+{# Normalizes all datetimes to make them comparable #}
+{%- macro normalize_date(date) -%}
+    {%- apply spaceless -%}
+        {{- date|date('jnYHi') -}}
+    {%- endapply -%}
+{%- endmacro -%}
+
+{# Enter a date to show time ago in human readable form #}
+{% macro time_ago(date) %}
+    {% apply spaceless %}
+        {{- craft.app.formatter.asRelativeTime(date) -}}
+    {% endapply %}
+{% endmacro %}
+
+
+{# Add blocks for different embedded asset types #}
+{%- macro embed(asset, class) -%}
+	{%- import '_macros/atomic' as atoms -%}
+
+	{%- set lut = {
+		youtube: {
+			type: 'embed',
+			atom: 'video',
+			options : {
+				url: asset.getIframeSrc([]),
+				title: asset.title,
+                utilities: class
+			}
+		},
+		vimeo: {
+			type: 'embed',
+			atom: 'video',
+			options: {
+				url: asset.getIframeSrc([]),
+				title: asset.title,
+                utilities: class
+			}
+		},
+		default: asset ? asset.html,
+	} -%}
+
+	{%- apply spaceless -%}
+
+		{%- set obj = lut[asset.providerName|lower] ??? null -%}
+
+		{{- obj ? atoms.atom(obj.type, obj.atom, obj.options) : lut['default'] -}}
+
+	{%- endapply -%}
+{%- endmacro -%}
+
+{%- macro imageToObject(asset, placeholder, optimisationField) -%}
+    {%- set image = asset.collect.first.get(optimisationField) ??? placeholder.collect.first.get(optimisationField) ??? null -%}
+
+    {%- apply spaceless -%}
+        {
+            srcsetWebp: image.srcsetWebP() ??? '',
+            srcset: image.srcset() ??? '',
+            placeholder: image.placeholderImage() ??? '',
+            alt: image.title ??? '',
+        }
+    {%- endapply -%}
+{%- endmacro -%}

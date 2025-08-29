@@ -1,0 +1,9 @@
+baseUrl: $PRIMARY_SITE_URL
+enabled: true
+handle: sharingstoriesde
+hasUrls: true
+language: de-CH
+name: Deutsch
+primary: true
+siteGroup: 99a58225-3f4f-4a3b-a338-35e1fda743ef # DE
+sortOrder: 1

@@ -1,8 +1,10 @@
 defaultPlacement: end
 enableVersioning: true
 entryTypes:
-  - fedb00ce-c6fb-4ef7-ba11-7c52ac8a5510 # Blog-Overview
-  - fc95636f-567a-49fe-a410-86de9a5ea3cc # Landingpage
+  -
+    uid: fedb00ce-c6fb-4ef7-ba11-7c52ac8a5510 # Blog-Overview
+  -
+    uid: fc95636f-567a-49fe-a410-86de9a5ea3cc # Landingpage
 handle: artikelKonzept
 maxAuthors: 10
 name: 'Artikel Konzept'
@@ -20,7 +22,17 @@ previewTargets:
         - '1'
 propagationMethod: all
 siteSettings:
-  b770f7e5-3411-4c52-91e3-c5929d334207: # CraftDev
+  2026b2ea-f645-425d-9940-6f03a71bc9b5: # Abchasisch
+    enabledByDefault: true
+    hasUrls: true
+    template: artikel-konzept/_entry.twig
+    uriFormat: 'artikel-konzept/{slug}'
+  b770f7e5-3411-4c52-91e3-c5929d334207: # Deutsch
+    enabledByDefault: true
+    hasUrls: true
+    template: artikel-konzept/_entry.twig
+    uriFormat: 'artikel-konzept/{slug}'
+  ee568fdc-7118-4dab-92e8-453bd4bcbfd3: # Russisch
     enabledByDefault: true
     hasUrls: true
     template: artikel-konzept/_entry.twig

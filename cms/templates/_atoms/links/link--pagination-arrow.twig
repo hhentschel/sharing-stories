@@ -1,0 +1,56 @@
+{%- extends '_atoms/links/_link--props' -%}
+{%- import '_macros/atomic' as atoms -%}
+{%- import '_macros/functions' as parse -%}
+
+{#
+    ### PROPERTIES ###
+    ------------------
+    INHERITED FROM: `_atoms/links/link--props.twig`
+
+    ### FUNCTIONS ###
+    -----------------
+    ga: parse google analytics attributes
+#}
+
+{%- block link -%}
+
+    {%- set props = props.merge({
+        'icon': options.icon ??? null
+    }) -%}
+
+    {%- set classes = {
+        prevnext: collect({
+            animate: 'transition-all duration-300 ease-in-out',
+            border: 'border border-viridian-500',
+            color: 'text-viridian-500',
+            display: 'flex items-center justify-center',
+            focus: 'focus:ring-2 focus:ring-celestial-500 focus:outline-none',
+            hover: 'hover:bg-viridian-500 hover:text-white',
+            layout: 'rounded-full',
+            size: 'w-12 h-12'
+        }),
+        prevnextDisabled: collect({
+            border: 'border border-concrete-300',
+            color: 'text-concrete-700',
+            display: 'flex items-center justify-center',
+            layout: 'rounded-full',
+            size: 'w-12 h-12'
+        })
+    } -%}
+
+    {%- minify -%}
+        <a 
+            href="{{- props.get('url') -}}" 
+            class="{{- props.get('url') ? classes.prevnext.implode(' ') : classes.prevnextDisabled.implode(' ') }}"
+            {{ parse.ga(props.get('ga')) }}
+        >
+            {%- if props.get('icon') -%}
+                {{- atoms.atom('icon', 'fa', {
+                    type: 'far',
+                    icon: props.get('icon'),
+                }) -}}
+            {%- endif -%}
+        </a>
+    {%- endminify -%}
+    
+{%- endblock -%}

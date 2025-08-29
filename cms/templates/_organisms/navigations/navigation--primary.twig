@@ -1,19 +1,169 @@
+{# https://www.w3.org/WAI/tutorials/menus/flyout/#flyoutnavmousefixed #}
+{%- import '_macros/atomic' as atoms -%}
 
+{#
+    ## ATOMS ##
+    -----------
+    link--navigation-primary: `_atoms/links/link--navigation-primary`
+    link--navigation-secondary: `_atoms/links/link--navigation-secondary`
 
-<nav id="navigation" class="flex items-center justify-between flex-wrap bg-teal-500 p-6">
-<div class="container">
-    <div class="w-3/4 block flex-grow lg:flex lg:items-center">
-  <div class="text-sm lg:flex-grow">
-      <a class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4" href="/">Home</a>
-    </div>
+    ## MOLECULES ##
+    ---------------
+    dropdown--navigation: `_atoms/dropdowns/dropdown--navigation`
+#}
 
-    {# {{ craft.navigation.render('mainMenu') }} #}
+{# {%- set search = craft.entries.section('search').collect.one ??? null -%} #}
 
-  {% for entry in craft.entries.section('pages').eagerly().collect.all() %}
-  <div class="w-3/4 block flex-grow lg:flex lg:items-center">
-  <div class="text-sm lg:flex-grow">
-      <a class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4" href="{{entry.url}}">{{entry.title}}</a>
-    </div>
-  {% endfor %}
-</div>
-</nav>
+{# {%- set branding = craft.globalSets()
+    .handle('organisationInfo')
+    .with(['logo', 'mark'])
+    .cache
+    .collect
+    .first
+-%} #}
+
+{%- block navigation -%}
+
+    {%- set classes = collect({
+        wrapper: collect({
+            animate: 'transition-all duration-500 ease-in-out',
+            group: 'group/header',
+            position: 'fixed left-0 z-50',
+            size: 'w-full',
+            spacing: 'px-6',
+        }),
+        logoWrapper: collect({
+            flex: 'flex items-center md:space-x-4',
+            padding: 'md:pr-2',
+            position: 'z-40',
+            size: 'w-full lg:w-auto lg:max-w-full',
+        }),
+        container: collect({
+            animation: '',
+            background: 'bg-red-500',
+            hover: 'group-hover/header:bg-white',
+            container: 'container max-w-screen-2xl',
+            flex: 'flex items-center justify-between',
+            rounded: '',
+            position: 'relative',
+            spacing: 'lg:space-l-4 xl:space-x-10 ',
+        }),
+
+        navigationItemsPrimary: collect({
+            group: 'group',
+            text: 'lg:text-center',
+            flex: 'lg:flex',
+            size: 'w-full lg:h-[65px] lg:w-auto'
+        }),
+        navigationUl: collect({
+            display: 'flex grow items-center',
+            space: 'space-x-2',
+        }),
+        navigationUlPrimary: collect({
+            background: ' lg:bg-transparent',
+            flex: 'lg:flex grow items-center',
+            padding: 'p-6 pt-[70px] lg:p-0',
+            position: 'absolute lg:static top-0 left-0',
+            space: 'lg:space-x-2',
+            size: 'w-full max-w-[330px] max-h-[80vh] overflow-auto scrollbar-hide lg:max-h-full lg:overflow-visible lg:max-w-full lg:w-auto lg:h-auto',
+        }),
+        navigation : collect({
+            position: 'z-20',
+            flex: 'flex items-center w-full min-h-[65px]',
+        }),
+        language: collect({
+            flex: 'flex items-center',
+            position: 'absolute right-10 bottom',
+        }),
+        languageLabel: collect({
+            color: _globals.get('theme') == 'light' ? 'text-white' : 'text-black',
+            cursor: 'cursor-pointer',
+            focus: 'focus:ring-4 focus:ring-celestial-500 focus:outline-none',
+            flex: 'flex items-center',
+            space: 'space-x-2 mr-7 mb-1',
+        }),
+
+    }) -%}
+
+    {%- minify -%}
+        <div
+
+        >
+            <div class="{{- classes.get('container').implode(' ') -}}">
+                <nav class="{{- classes.get('navigation').implode(' ') -}}" aria-label="Primary Navigation">
+                    <span
+                        class="{{- classes.get('logoWrapper').implode(' ') -}}"
+                    >
+                        <a href="#page" class="sr-only focus:not-sr-only focus:ring-2 focus:ring-celestial-500 focus:outline-none">
+                            {{ 'Skip to content'|t }}
+                        </a>
+
+                        <a
+                            href="{{- siteUrl -}}"
+                            {# title="{{- seomatic.site.siteName -}}" #}
+
+                            class="grow-0 relative block z-10 !ml-0 focus:ring-2 focus:ring-celestial-500 focus:outline-none"
+                        >
+                            {# {{- atoms.atom('brand-item', 'logo', {
+                                svg: branding.logo.collect.first,
+                                utilities: 'h-8',
+                            }) -}} #}
+                        </a>
+                    </span>
+
+                    <ul
+                        class="{{- classes.get('navigationUlPrimary').implode(' ') -}}"
+                        id="mobile-navigation"
+                    >
+                        {%- for item in navigation -%}
+                            <li
+                                class="{{- classes.get('navigationItemsPrimary').implode(' ') -}}"
+                            >
+                                <div class="flex w-full grow">
+                                    {{- atoms.atom('link', 'navigation-primary', {
+                                        url: item.url,
+                                        text: item.title|raw,
+                                        target: '_self',
+                                        slug: item.slug,
+                                        utilities: 'h-full'
+                                    }) -}}
+                                </div>
+                            </li>
+                        {%- endfor -%}
+                    </ul>
+                </nav>
+
+                {# language navigation #}
+                <div
+                    class="{{- classes.get('language').implode(' ') -}}"
+                >
+                    <button
+                        class="{{- classes.get('languageLabel').implode(' ') -}}"
+                        role="button"
+                    >
+                        {# {{- atoms.atom('icon', 'fa', {
+                            type: 'fa-solid',
+                            icon: 'fa-language',
+                        }) -}} #}
+
+                        {# {{- atoms.atom('text', 'body' , {
+                            content: craft.app.sites.currentSite,
+                            type: 'large',
+                            color: _globals.get('theme') == 'light' ? 'text-white' : 'text-black',
+                            utilities: 'font-bold'
+                        }) -}} #}
+                    </button>
+
+                    {%- include '_organisms/navigations/navigation--language' ignore missing with {
+                        color: 'text-white',
+                        position: {
+                            y: 'top',
+                            x: 'right',
+                        }
+                    } -%}
+                </div>
+            </div>
+        </div>
+    {%- endminify -%}
+
+{%- endblock -%}

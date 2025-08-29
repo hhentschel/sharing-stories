@@ -1,0 +1,9 @@
+baseUrl: $AB_SITE_URL
+enabled: '1'
+handle: sharingstoriesab
+hasUrls: true
+language: ka
+name: Abchasisch
+primary: false
+siteGroup: 58b9605a-a27f-4aa4-97d1-06e8e0d11ccc # AB
+sortOrder: 3

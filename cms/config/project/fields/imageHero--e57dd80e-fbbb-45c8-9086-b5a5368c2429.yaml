@@ -9,9 +9,9 @@ settings:
   allowUploads: true
   allowedKinds: null
   branchLimit: null
+  defaultPlacement: end
   defaultUploadLocationSource: 'volume:ca23ec94-c45c-4713-b3e5-5d8de0457e74' # ImageOptimize - Hero
   defaultUploadLocationSubpath: null
-  localizeRelations: false
   maintainHierarchy: false
   maxRelations: null
   minRelations: null
@@ -32,5 +32,5 @@ settings:
   validateRelatedElements: false
   viewMode: list
 translationKeyFormat: null
-translationMethod: site
+translationMethod: siteGroup
 type: craft\fields\Assets

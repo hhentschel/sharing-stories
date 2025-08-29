@@ -1,0 +1,26 @@
+{%- extends '_atoms/texts/_text--props' -%}
+{%- import '_macros/functions' as parse -%}
+
+{#
+    ### PROPERTIES ###
+    ------------------
+    
+    INHERITED FROM: `_atoms/texts/text--props.twig`
+#}
+
+{%- block text -%}
+    {%- set classes = collect({
+        display: 'inline-flex',
+        color: props.get('color') ??? 'text-black',
+        font: 'font-primary not-italic',
+        type: 'text-bold-sm',
+        utilities: props.get('utilities'),
+    }) -%}
+
+    {%- minify -%}
+        <time datetime="{{- props.content|date('c') -}}" class="{{ classes.implode(' ') }}">
+            {{- props.get('time') ? parse.format_date(props.content) : parse.format_datetime(props.content)|replace(' • 00:00', '') -}}
+        </time>
+    {%- endminify -%}
+
+{%- endblock -%}

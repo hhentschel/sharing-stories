@@ -1,0 +1,82 @@
+{%- extends '_atoms/links/_link--props' -%}
+{%- import '_macros/atomic' as ions -%}
+{%- import '_macros/atomic' as atoms -%}
+{%- import '_macros/functions' as parse -%}
+
+{#
+    ### PROPERTIES ###
+    ------------------
+
+    INHERITED FROM: `_atoms/links/link--props.twig`
+
+    EXTENDED
+    --------
+    counter: (number) -- counter value
+
+    ### FUNCTIONS ###
+    -----------------
+    ga: parse google analytics attributes
+#}
+
+{%- block link -%}
+
+    {%- set props = props.merge({
+        slug: options.slug ??? null,
+        counter: options.counter ??? null,
+        hasDescendants: options.hasDescendants ?? false,
+    })-%}
+
+    {%- set classes = {
+        link: collect({
+            active: 'active:text-orange-500',
+            color: (('/' ~ props.get('slug') ~ '/') in craft.app.request.absoluteUrl or craft.app.request.absoluteUrl == props.get('url')) ? 'text-orange-600' : 'text-black',
+            animation: 'transition-colors duration-200 ease-in-out',
+            cursor: props.get('url') ? 'cursor-pointer' : 'pointer-events-none',
+            display: 'flex lg:items-center lg:justify-center w-full grow relative z-30 group',
+            focus: 'focus:ring-2 focus:ring-celestial-500 focus:outline-none focus:text-orange-500 group-focus:text-orange-500',
+            hover: 'group-hover:text-orange-500 hover:text-orange-500',
+            font: 'font-primary font-medium text-base lg:text-sm xl:text-base tracking-wide',
+            padding: 'pl-2.5 pr-4 py-2 lg:py-0 lg:px-2 xl:px-4 space-x-2',
+            utilities: props.get('utilities'),
+            whitespace: 'whitespace-nowrap lg:whitespace-normal 2xl:whitespace-nowrap',
+        }),
+        arrow: collect({
+            animation: 'transition-all duration-500 delay-200 ease-in-out',
+            focus: 'group-hover:opacity-100',
+            hover: 'group-focus:opacity-100',
+            opacity: 'opacity-0',
+            position: 'absolute left-1/2 -bottom-7 -translate-x-1/2 -z-10',
+        })
+    }-%}
+    {# py-2 lg:py-4 #}
+
+    {%- minify -%}
+        <a
+            href="{{- props.get('url') -}}"
+            class="{{- classes.link.implode(' ') -}}"
+            target="{{- props.get('target') -}}"
+            aria-haspopup="{{- props.hasDescendants ? 'true' : 'false' -}}"
+            aria-label="{{- props.get('label') ~ ' ' ~ props.get('counter') ?? props.get('counter') }}"
+            {{ craft.app.request.absoluteUrl == props.get('url') ? 'aria-current="page"' : ''}}
+            x-on:focus="activeSubNav = '{{- props.get('slug') -}}'"
+        >
+            {%- if props.get('icon') -%}
+                {{- atoms.atom('icon', 'fa', {
+                    type: props.get('icon').type,
+                    icon: props.get('icon').icon,
+                }) -}}
+            {%- endif -%}
+
+            <span>
+                {{- props.get('text')|striptags|typogrify(true)|raw -}}
+            </span>
+
+            {%- if props.get('counter') -%}
+                {{- atoms.atom('counter', 'primary' , {
+                    text: props.get('counter'),
+                }) -}}
+            {%- endif -%}
+        </a>
+    {%- endminify -%}
+
+{%- endblock -%}

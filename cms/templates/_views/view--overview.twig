@@ -13,12 +13,16 @@
 <div class="container flex flex-col items-center bg-cyan-100">
 
 <h1 class="h1-lg">{{ entry.title }}</h1>
+view-overview
 
 {% for block in entry.contentBuilder.all() %}
   {% switch block.type %}
 
     {% case "cta" %}
       {{ block.render() }}
+
+    {% case "richText" %}
+    {{ block.render() }}
 
     {% case "images" %}
       {{ block.render() }}

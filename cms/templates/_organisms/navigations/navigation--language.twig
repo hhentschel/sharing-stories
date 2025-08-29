@@ -1,0 +1,81 @@
+  {# <nav class="language-switcher">
+      <ul class="language-switcher__list flex space-x-1">
+          {% for site in craft.app.sites.getAllSites() %}
+              {% set siteEntry = craft.entries.id(entry.id).siteId(site.id).one() %}
+              {% if siteEntry %}
+                  {% set isCurrent = site.id == craft.app.sites.currentSite.id %}
+                  <li class="language-switcher__item">
+                      <a href="{{ siteEntry.url }}"
+                         class="language-switcher__link text-xs {{ isCurrent ? 'font-semibold underline' : 'hover:underline' }}"
+                         {% if isCurrent %}aria-current="true"{% endif %}
+                         hreflang="{{ site.language }}">
+                          {{ site.language|slice(0,2)|lower }}
+                      </a>
+                  </li>
+              {% endif %}
+          {% endfor %}
+      </ul>
+  </nav> #}
+
+
+  {%- import '_macros/atomic' as atoms -%}
+
+{%- set props = collect({
+    color: color ??? 'text-black',
+    utilities: utilities ??? '',
+    position: position ??? {y: 'bottom', x: 'left'},
+    entryType: entryType ??? null,
+}) -%}
+
+{%- minify -%}
+    {%- set currentElement = craft.app.urlManager.matchedElement -%}
+    {%- set sites = craft.app.sites.getAllSites() -%}
+    {%- set switcherLinks = collect([]) -%}
+
+    {%- for site in sites -%}
+        {%- if site.baseUrl is not empty -%}
+            {%- set title = site.name -%}
+            {%- set url = site.baseUrl -%}
+
+            {%- if entry is defined -%}
+                {%- set siteEntry = craft.entries.id(entry.id).siteId(site.id).one() -%}
+                {%- if siteEntry -%}
+                    {%- set url = siteEntry.url -%}
+                {%- endif -%}
+            {%- endif -%}
+
+            {%- set switcherLinks = switcherLinks.push({
+                url: url,
+                title: title,
+                countryCode: site.language|split('-')|last,
+                current: site.id == currentSite.id ? true : false,
+                language: site.language,
+            }) -%}
+        {%- endif -%}
+    {%- endfor -%}
+
+    {%- if switcherLinks.count > 1 -%}
+        <nav class="language-switcher">
+            <ul class="language-switcher__list flex space-x-1">
+                {% for switcherLink in switcherLinks %}
+                    <li class="language-switcher__item">
+                        {# <a href="{{ switcherLink.url }}"
+                           class="language-switcher__link text-xs {{ props.get('color') }} {{ switcherLink.current ? 'font-semibold underline' : 'hover:underline' }}"
+                           {% if switcherLink.current %}aria-current="true"{% endif %}
+                           hreflang="{{ switcherLink.language }}">
+                            {{ switcherLink.language|slice(0,2)|lower }}
+                        </a> #}
+                        <li>
+                            {{- atoms.atom('link', 'navigation-footer', {
+                                url: switcherLink.url ~ (craft.app.request.getQueryStringWithoutPath() | length > 0 ? '?' ~ craft.app.request.getQueryStringWithoutPath() : ''),
+                                text: switcherLink.language|slice(0,2)|lower,
+                                utilities: 'px-4 block w-full',
+
+                            }) -}}
+                        </li>
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+    {%- endif -%}
+{%- endminify -%}

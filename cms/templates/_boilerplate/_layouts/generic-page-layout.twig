@@ -29,14 +29,21 @@
 {# -- Page body -- #}
 {% block bodyHtml %}
 
+{%- set navigation = craft.entries.section('pages')
+        .cache()
+        .level(1)
+        .collect()
+        .all()
+    -%}
+
     <div id="page-wrapper">
 
-            {# -- Header -- #}
-            {%- include '_organisms/headers/header--primary' ignore missing -%}
+        {# -- Header -- #}
+        {%- include '_organisms/headers/header--primary' ignore missing -%}
 
         {# -- Navigation --  #}
-        {%- include '_organisms/navigations/navigation--primary' ignore missing with {
-            navigation: null
+       {%- include '_organisms/navigations/navigation--primary' ignore missing with {
+            navigation: navigation,
         } -%}
 
         <main class="flex justify-between flex-col min-h-screen" id="page-content">

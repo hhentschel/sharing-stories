@@ -1,0 +1,27 @@
+{#
+    ### PROPERTIES ###
+    ------------------
+    active: (Boolean) -- wheter the link is active of not
+    color: (ENUM) -- the color for the link
+    ga: (OBJ) -- add a category / action / label for GTM tracking
+    label: (STR) -- aria label for the button
+    target: (STR) -- add _blank if you want to open the link in a new window
+    text: (STR) -- the text for the link
+    url: (STR) -- the url for the link
+    utilities: (STR) -- the link utilities
+#}
+
+{%- set props = collect({
+    active: options.active ??? false,
+    color: options.color ??? 'text-viridian-500',
+    description: options.description ??? '',
+    ga: options.ga ??? null,
+    label: options.label ??? options.text ??? '',
+    target: options.target ??? '_self',
+    text: options.text ??? '',
+    url: options.url ??? null,
+    utilities: options.utilities ??? null,
+}) -%}
+
+{%- block link -%}
+{%- endblock -%}

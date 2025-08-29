@@ -1,0 +1,26 @@
+{%- extends '_atoms/texts/_text--props' -%}
+
+{#
+    ### PROPERTIES ###
+    ------------------
+    
+    INHERITED FROM: `_atoms/texts/text--props.twig`
+#}
+
+{%- block text -%}
+
+    {%- set classes = collect({
+        alignment: props.get('alignment'),
+        color: props.get('color') ??? 'text-celestial-500',
+        font: 'font-primary font-medium',      
+        size: 'text-h4-sm md:text-h4-md lg:text-h4-lg',
+        utilities: props.get('utilities'),
+    }) -%}
+
+    {%- minify -%}
+        <span class="{{- classes.implode(' ') -}}">
+            {{- props.get('content') -}}
+        </span>
+    {%- endminify -%}
+
+{%- endblock -%}

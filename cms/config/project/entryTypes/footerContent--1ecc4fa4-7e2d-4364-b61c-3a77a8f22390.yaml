@@ -6,35 +6,8 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            autocapitalize: true
-            autocomplete: false
-            autocorrect: true
-            class: null
-            disabled: false
-            elementCondition: null
-            id: null
-            includeInCards: false
-            inputType: null
-            instructions: null
-            label: null
-            max: null
-            min: null
-            name: null
-            orientation: null
-            placeholder: null
-            providesThumbs: false
-            readonly: false
-            requirable: false
-            size: null
-            step: null
-            tip: null
-            title: null
-            type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: d9f34cb0-256c-42f6-98a1-aeec86ab557b
-            userCondition: null
-            warning: null
-            width: 100
-          -
+            dateAdded: '2025-08-27T12:39:29+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: db52a890-e4be-4edb-b995-2b4d3aee70a4 # Überschrift
             handle: null
@@ -50,6 +23,8 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2025-08-27T12:39:29+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 72555363-9815-48cd-bcce-d855765e7d66 # Plain Text
             handle: null
@@ -69,12 +44,12 @@ fieldLayouts:
         userCondition: null
 handle: footerContent
 hasTitleField: false
-icon: ''
+icon: null
 name: 'Footer Content'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
-slugTranslationMethod: site
-titleFormat: ''
+slugTranslationMethod: siteGroup
+titleFormat: null
 titleTranslationKeyFormat: null
-titleTranslationMethod: site
+titleTranslationMethod: siteGroup

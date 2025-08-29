@@ -1,4 +1,4 @@
-dateModified: 1751313671
+dateModified: 1756459155
 elementSources:
   craft\elements\Entry:
     -
@@ -136,26 +136,31 @@ meta:
     9dc35b77-87de-4411-91b1-05d093c994b9: Caption # Caption
     9f8d5177-949f-420b-be9a-2f552d514a68: Images # Images
     26db054c-db10-4316-b753-0544f54f6710: 'Related Entries' # Related Entries
+    58b9605a-a27f-4aa4-97d1-06e8e0d11ccc: AB # AB
     84ce4835-15b6-4400-af9c-f2815a462fb3: 'Related Entries' # Related Entries
     84dcc5df-eba0-4369-b9d6-d82865740798: 'Simple Name Value Table' # Simple Name Value Table
     86f4b979-439d-4d67-8e6d-053a5ddf4c89: Pages # Pages
-    99a58225-3f4f-4a3b-a338-35e1fda743ef: CraftDev # CraftDev
+    99a58225-3f4f-4a3b-a338-35e1fda743ef: DE # DE
     287f6c8e-3c73-4ee3-9936-cbdaa3ba25fc: Position # Position
     607df1b9-7f1f-461d-85ae-8ff854552412: Footer # Footer
     1230e3f3-1ac1-4b89-9150-35cbf1f39ff2: 'Image Hero Optimized' # Image Hero Optimized
+    2026b2ea-f645-425d-9940-6f03a71bc9b5: Abchasisch # Abchasisch
     7601d3fa-9b2e-43fb-9b7a-d31bdc9d1e90: Tabelle # Tabelle
     9522a7a6-0ee3-42e2-a4b4-bd2f691c2c4d: Blog # Blog
     867399f9-5cee-4f95-836b-a04cc7bc2639: Header # Header
     72555363-9815-48cd-bcce-d855765e7d66: 'Plain Text' # Plain Text
     73392818-36d0-419a-a731-d65ac4927ebc: 'Public Schema' # Public Schema
     a2c173c5-4b31-4338-86ee-a0cb4aafc12b: Home # Home
+    a85b4d7b-b0c6-4e40-ba90-eeeab955ac52: Title # Title
     b3f3c321-3167-4f74-8f3e-a3a6a7b75f96: Description # Description
-    b770f7e5-3411-4c52-91e3-c5929d334207: CraftDev # CraftDev
+    b236e35c-4122-4d94-9a4f-44eb5b369bb3: Kontakt # Kontakt
+    b770f7e5-3411-4c52-91e3-c5929d334207: Deutsch # Deutsch
     b64266e0-f780-4789-82af-577ebebb1372: Footer # Footer
     bdf32217-a781-41f4-8a9d-ba623b04e90a: 'Image Content' # Image Content
     c3a6b49e-2ca2-47c0-b154-7eb46f85bd2f: Header # Header
     c21ecef0-860f-40a8-be9f-b182cc90ff2c: Nummernfeld # Nummernfeld
     c55ca0a9-4bd6-409b-afd8-c1884dafecd0: Team # Team
+    c5802e19-dd44-4571-acdd-fe94744fa402: RU # RU
     ca23ec94-c45c-4713-b3e5-5d8de0457e74: 'ImageOptimize - Hero' # ImageOptimize - Hero
     ca82ce19-1d0f-494a-b0e9-79eab0ba3665: CTA # CTA
     cbacf1e2-321f-4024-a6b0-5159a7fa227c: 'ImageOptimize - Content' # ImageOptimize - Content
@@ -168,7 +173,9 @@ meta:
     e96d7c98-3659-4dac-834a-9b3875e19d3b: Simple # Simple
     e68167e4-15ab-4aee-93ff-881ea72b1cad: 'Artikel Konzept' # Artikel Konzept
     eda1d68b-3d84-43a4-8e0b-88fccb194079: 'Image Content Optimized' # Image Content Optimized
+    ee568fdc-7118-4dab-92e8-453bd4bcbfd3: Russisch # Russisch
     f53223cc-170a-472c-9561-2f22df16bc96: 'Longform Content' # Longform Content
+    f94560a1-d54e-44ec-8cbb-f684bf65ff9b: Seiten # Seiten
     fa933347-d51c-4fd4-b944-cdc378d3dde8: Footer # Footer
     fab38811-fef1-4fc7-a7d4-7aeb3437eb35: 'CTA Url' # CTA Url
     fc95636f-567a-49fe-a410-86de9a5ea3cc: Landingpage # Landingpage
@@ -183,10 +190,6 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 3.0.0.0
-  cp-field-inspect:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
   empty-coalesce:
     edition: standard
     enabled: true
@@ -261,5 +264,5 @@ system:
   live: true
   name: Sharing-Stories
   retryDuration: null
-  schemaVersion: 5.7.0.3
+  schemaVersion: 5.8.0.3
   timeZone: America/Los_Angeles

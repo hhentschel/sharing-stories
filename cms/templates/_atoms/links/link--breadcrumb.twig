@@ -1,0 +1,57 @@
+{%- extends '_atoms/links/_link--props' -%}
+{%- import '_macros/atomic' as ions -%}
+{%- import '_macros/atomic' as atoms -%}
+{%- import '_macros/functions' as parse -%}
+
+{#
+    ### PROPERTIES ###
+    ------------------
+    
+    INHERITED FROM: `_atoms/links/link--props.twig`
+
+    EXTENDED
+    --------
+    counter: (number) -- counter value
+
+    ### FUNCTIONS ###
+    -----------------
+    ga: parse google analytics attributes
+#}
+
+{%- block link -%}
+
+    {%- set classes = {
+        link: collect({
+            animation: 'transition-colors duration-200 ease-in-out',
+            color: props.get('color') ??? 'text-black',
+            cursor: props.get('url') ? 'cursor-pointer' : 'pointer-events-none',
+            display: 'inline-flex relative group',
+            focus: 'focus:ring-2 focus:ring-celestial-500 focus:outline-none focus:underline',
+            font: 'font-primary font-bold text-base tracking-wide',
+            hover: 'hover:underline',
+            utilities: props.get('utilities'),
+        }),
+        arrow: collect({
+            animation: 'transition-all duration-700 ease-in-out',
+            focus: 'group-hover:opacity-100',
+            hover: 'group-focus:opacity-100',
+            position: 'absolute left-1/2 -bottom-7 -translate-x-1/2',
+            visibility: 'opacity-0'
+        })
+    } -%}
+
+    {%- minify -%}
+        <a 
+            href="{{- props.get('url') -}}" 
+            class="{{- classes.link.implode(' ') -}}"
+            target="{{- props.get('target') -}}"
+            aria-label="{{- props.get('label') -}}"
+            {{ parse.ga(props.get('ga')) }}
+        >
+            <span>
+                {{- props.get('text')|raw -}}
+            </span>
+        </a>
+    {%- endminify -%}
+    
+{%- endblock -%}

@@ -1,0 +1,41 @@
+{%- extends '_atoms/links/_link--props' -%}
+{%- import '_macros/atomic' as atoms -%}
+{%- import '_macros/functions' as parse -%}
+
+{#
+    ### PROPERTIES ###
+    ------------------
+    INHERITED FROM: `_atoms/links/link--props.twig`
+
+    ### FUNCTIONS ###
+    -----------------
+    ga: parse google analytics attributes
+#}
+
+{%- block link -%}
+
+    {%- set classes = {
+        page: collect({
+            animate: 'transition-all duration-300 ease-in-out',
+            color: 'text-viridian-500',
+            display: 'flex items-center justify-center',
+            focus: 'focus:ring-2 focus:ring-celestial-500 focus:outline-none',
+            font: 'font-primary text-base font-bold',
+            hover: 'hover:bg-viridian-500 hover:text-white',
+            layout: 'rounded-full',
+            size: 'w-12 h-12',
+            utilities: props.get('utilities')
+        }),
+    } -%}
+
+    {%- minify -%}
+        <a 
+            href="{{- props.get('url') -}}" 
+            class="{{- classes.page.implode(' ') -}}"
+            {{ parse.ga(props.get('ga')) }}
+        >
+            {{- props.get('label') -}}
+        </a>
+    {%- endminify -%}
+    
+{%- endblock -%}

@@ -1,0 +1,72 @@
+{%- extends '_atoms/buttons/_button--props' -%}
+{%- import '_macros/atomic' as atoms -%}
+{%- import '_macros/functions' as parse -%}
+
+{#
+    ### PROPERTIES ###
+    ------------------
+
+    INHERITED FROM: `_atoms/buttons/button--props.twig`
+
+    ### FUNCTIONS ###
+    -----------------
+    ga: parse google analytics attributes
+#}
+
+        {# text: props.get('size').text, #}
+        {# padding: props.get('icon') and props.get('text') == null ? '' : props.get('size').padding, #}
+
+{%- block button -%}
+    {%- set classes = collect({
+        default: 'inline-flex justify-center items-center rounded-full whitespace-nowrap gap-x-2',
+        position:  props.get('iconPosition') == null ? 'flex-row-reverse' : (props.get('iconPosition') == 'after' ? 'flex-row' : 'flex-row-reverse'),
+        animation: 'transition-colors duration-200 ease-in-out',
+        color: 'text-viridian-500 bg-white',
+        cursor: 'cursor-pointer',
+        border: 'border-2 border-viridian-500',
+        focus: 'focus:ring-2 focus:ring-celestial-500 focus:outline-none',
+        text: 'text',
+        font: 'font-primary leading-8 font-medium tracking-wider',
+        hover: 'hover:bg-viridian-500 hover:text-white',
+        disabled: 'disabled:border-concrete-300 disabled:text-concrete-700',
+        padding: '10',
+        paddingIcon: props.get('icon') and props.get('text') == null ? (props.get('size').text == 'text-base' ? 'w-10 h-10' : 'w-12 h-12') : '',
+        iconButton: props.get('icon') and props.get('text') == null ? 'flex items-center justify-center' : '',
+        utilities: props.get('utilities'),
+    }) -%}
+
+    {%- minify -%}
+        {%- if props.get('url') -%}
+        <a
+            {{ props.get('url') ? 'href=' ~ props.get('url') : '' }}
+            {{ parse.ga(props.get('ga')) }}
+            {{ props.get('target') ? 'target=' ~ props.get('target') : '' }}
+            aria-label="{{- props.get('label') -}}"
+            class="{{- classes.implode(' ') -}}"
+        >
+        {%- else -%}
+        <span class="{{- classes.implode(' ') -}}">
+        {%- endif -%}
+
+            {%- if props.get('text') -%}
+                <span>
+                    {{- props.get('text') -}}
+                </span>
+            {%- endif -%}
+
+            {%- if props.get('icon') -%}
+                {{- atoms.atom('icon', 'fa', {
+                    type: props.get('icon').type,
+                    icon: props.get('icon').icon,
+                }) -}}
+            {%- endif -%}
+
+
+        {%- if props.get('url') -%}
+        </a>
+        {%- else -%}
+        </span>
+        {%- endif -%}
+    {%- endminify -%}
+
+{%- endblock -%}

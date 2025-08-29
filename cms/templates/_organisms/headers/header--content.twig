@@ -8,14 +8,17 @@
         font: 'font-primary',
         size: 'text-h1-sm md:text-h1-md lg:text-h1-lg',
         utilities: props.get('utilities'),
+        padding: props.get('padding') ??? 'py-6 px-5 lg:py-12',
     }) -%}
 
     {%- minify -%}
         <header class="{{ classes.implode(' ') }}">
-                <div class="header__content relative z-10">
-                    {{- props.get('content')|striptags('<strong>')|typogrify()|raw -}}
+                <div class="header__content relative z-10 flex justify-between">
+                    <div>
+                        {{- props.get('content')|striptags('<strong>')|typogrify()|raw -}}
+                    </div>
                 </div>
-                <div class="header__bg">
+                {# <div class="header__bg">
                  {{- atoms.atom('image', 'hero',  {
                     image: header.imageHero.eagerly().collect.first,
                     sizes: '100vw',
@@ -24,7 +27,7 @@
                     utilitiesImage: 'w-full h-full',
                     utilitiesPicture: 'header__bg-image'
                 }) -}}
-                </div>
+                </div> #}
         </header>
     {%- endminify -%}
 {%- endblock -%}

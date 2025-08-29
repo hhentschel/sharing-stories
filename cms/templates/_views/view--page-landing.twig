@@ -1,5 +1,37 @@
 {%- import '_macros/atomic' as atoms -%}
 
+view-page-landing
+<div class="container mx-auto my-0 flex flex-col px-0 bg-cyan-100">
 {{ entry.title }}
 
+
+         {# {{ entry.contentBuilder }} #}
+ {% for block in entry.contentBuilder.all() %}
+            {% switch block.type %}
+
+                {% case "cta" %}
+                {{ block.render() }}
+
+                {% case "richText" %}
+                {{ block.render() }}
+
+                {% case "images" %}
+                {{ block.render() }}
+
+                {% case "featureList" %}
+                {{ block.render({ loop, themeColor: "lightblue" }) }}
+
+                {% case "relatedEntries" %}
+                {{ block.render() }}
+
+                {% case "table" %}
+                {{ block.render() }}
+
+                {% default %}
+
+
+            {% endswitch %}
+
+            {% endfor %}
+</div>
 

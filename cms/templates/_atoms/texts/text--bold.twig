@@ -1,0 +1,25 @@
+{%- extends '_atoms/texts/_text--props' -%}
+
+{#
+    ### PROPERTIES ###
+    ------------------
+    
+    INHERITED FROM: `_atoms/texts/text--props.twig`
+#}
+
+{%- block text -%}
+    {%- set classes = collect({
+        display: 'inline-flex',
+        color: props.get('color') ??? 'text-black',
+        font: 'font-primary font-bold not-italic',
+        type: 'text-bold-md',
+        utilities: props.get('utilities'),
+    }) -%}
+
+    {%- minify -%}
+        <span class="{{- classes.implode(' ') -}}">
+            {{- props.get('content')|typogrify(true) -}}
+        </span>
+    {%- endminify -%}
+
+{%- endblock -%}

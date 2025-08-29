@@ -1,7 +1,8 @@
 defaultPlacement: end
 enableVersioning: true
 entryTypes:
-  - 867399f9-5cee-4f95-836b-a04cc7bc2639 # Header
+  -
+    uid: 867399f9-5cee-4f95-836b-a04cc7bc2639 # Header
 handle: header
 maxAuthors: 1
 name: Header
@@ -19,7 +20,17 @@ previewTargets:
         - '1'
 propagationMethod: all
 siteSettings:
-  b770f7e5-3411-4c52-91e3-c5929d334207: # CraftDev
+  2026b2ea-f645-425d-9940-6f03a71bc9b5: # Abchasisch
+    enabledByDefault: true
+    hasUrls: true
+    template: _routers/router--page.twig
+    uriFormat: header
+  b770f7e5-3411-4c52-91e3-c5929d334207: # Deutsch
+    enabledByDefault: true
+    hasUrls: true
+    template: _routers/router--page.twig
+    uriFormat: header
+  ee568fdc-7118-4dab-92e8-453bd4bcbfd3: # Russisch
     enabledByDefault: true
     hasUrls: true
     template: _routers/router--page.twig

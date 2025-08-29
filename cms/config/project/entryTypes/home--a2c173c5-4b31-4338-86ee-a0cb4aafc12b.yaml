@@ -1,6 +1,8 @@
 color: red
+description: null
 fieldLayouts:
   16ce9aaa-656d-4539-9c9e-97e9242e4bf9:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -10,6 +12,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
+            dateAdded: '2025-08-29T09:17:57+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -24,7 +27,7 @@ fieldLayouts:
             placeholder: null
             providesThumbs: false
             readonly: false
-            requirable: false
+            required: true
             size: null
             step: null
             tip: null
@@ -35,6 +38,8 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2025-08-29T09:17:57+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: e57dd80e-fbbb-45c8-9086-b5a5368c2429 # Image Hero
             handle: null
@@ -50,6 +55,8 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2025-08-29T09:17:57+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: e2f3b30c-2b00-465f-b42b-5b8e8e0ab107 # Rich Text
             handle: HomeContent
@@ -64,6 +71,40 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            dateAdded: '2025-08-29T09:19:15+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: f53223cc-170a-472c-9561-2f22df16bc96 # Longform Content
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ce4e5c27-e8b7-447f-82b1-2d4387d53855
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-08-29T09:19:15+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 6a8579a0-7f72-41c9-9a9b-4d6d4f5ad746 # Content Builder
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bed138a8-be0d-4bc9-8fcf-a7a4e8622b20
+            userCondition: null
+            warning: null
+            width: 100
         name: Content
         uid: 62546cb3-3b56-4a0b-a2ff-a03206f9462f
         userCondition: null
@@ -75,6 +116,6 @@ showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: ''
+titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

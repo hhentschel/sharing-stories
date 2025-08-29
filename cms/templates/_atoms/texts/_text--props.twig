@@ -1,5 +1,27 @@
+{#
+    ### PROPERTIES ###
+    ------------------
+    alignment: (ENUM) -- the text alignment
+    color: (ENUM) -- the color of the text
+    content: (STR) -- the actual content as a string
+    utilities: (STR) -- the specific TW spacing utilities to add
+#}
 
 {%- set props = collect({
+    alignment: options.alignment ??? null,
+    color: options.color ??? null,
+    content: options.content ??? null,
+    time: options.time ??? false,
+    utilities: options.utilities ?? null,
+}) -%}
+
+{%- block text -%}
+{%- endblock -%}
+
+
+
+
+{# {%- set props = collect({
   content: options.content ??? '',
   size: options.size ??? 'text-h1-sm',
   utilities: options.utilities ??? null,
@@ -9,4 +31,4 @@
 {%- endblock -%}
 
 {%- block quote -%}
-{%- endblock -%}
+{%- endblock -%} #}

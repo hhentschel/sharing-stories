@@ -1,0 +1,70 @@
+color: fuchsia
+description: null
+fieldLayouts:
+  347f0a0f-e7cc-4d6f-9622-35e85251395a:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2025-08-29T09:13:45+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: a27dccb5-d8d9-4286-9cc5-c20c08de72cb
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-08-29T09:15:25+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 6a8579a0-7f72-41c9-9a9b-4d6d4f5ad746 # Content Builder
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 60497fd9-8870-4238-a9c0-c9798e1ffdad
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 0e9bb60a-06bb-42c5-93f7-0aa351aa27fd
+        userCondition: null
+handle: pages
+hasTitleField: true
+icon: page
+name: Seiten
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: siteGroup

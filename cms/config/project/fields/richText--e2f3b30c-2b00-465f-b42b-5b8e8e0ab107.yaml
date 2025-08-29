@@ -6,16 +6,21 @@ searchable: false
 settings:
   availableTransforms: ''
   availableVolumes: '*'
+  characterLimit: null
   ckeConfig: e96d7c98-3659-4dac-834a-9b3875e19d3b # Simple
   createButtonLabel: null
   defaultTransform: null
-  enableSourceEditingForNonAdmins: false
+  expandEntryButtons: false
+  fullGraphqlData: false
+  parseEmbeds: false
   purifierConfig: null
   purifyHtml: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
   showWordCount: true
+  sourceEditingGroups:
+    - __ADMINS__
   wordLimit: 1000
 translationKeyFormat: null
-translationMethod: none
+translationMethod: siteGroup
 type: craft\ckeditor\Field

@@ -1,0 +1,45 @@
+{%- extends '_atoms/links/_link--props' -%}
+{%- import '_macros/atomic' as atoms -%}
+{%- import '_macros/functions' as parse -%}
+
+{#
+    ### PROPERTIES ###
+    ------------------
+
+    INHERITED FROM: `_atoms/links/link--props.twig`
+
+    ### FUNCTIONS ###
+    -----------------
+    ga: parse google analytics attributes
+#}
+
+{%- block link -%}
+
+    {%- set classes = collect({
+        default: 'inline-flex',
+        animation: 'transition-colors duration-200 ease-in-out',
+        font: 'font-normal text-lg tracking-wide leading-7',
+        hover: 'hover:text-viridian-700',
+        disabled: props.get('url') ? props.get('color') : 'text-concrete-700',
+        focus: 'focus:ring-2 focus:ring-celestial-500 focus:outline-none',
+        cursor: props.get('url') ? 'cursor-pointer' : 'pointer-events-none',
+        textDecoration: props.get('textDecoration'),
+        utilities: props.get('utilities'),
+    }) -%}
+
+    {% set linkAttributes = {
+        class: classes.reject((value) => value == '').implode(' '),
+        disabled: props.get('url') ? false : true,
+        href: props.get('url'),
+        active: props.get('active'),
+        ga: props.get('ga'),
+        target: props.get('target'),
+        text: props.get('text'),
+        'aria-label': props.get('label')
+    } %}
+
+    {%- minify -%}
+        {{ tag(props.get('url') ? 'a' : 'div', linkAttributes) }}
+    {%- endminify -%}
+
+{%- endblock -%}

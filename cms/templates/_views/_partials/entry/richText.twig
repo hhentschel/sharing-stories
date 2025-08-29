@@ -1,0 +1,11 @@
+{# {%- extends '_atoms/texts/_text--props' -%}
+{%- import '_macros/atomic' as atoms -%} #}
+<div>
+{{ entry.title}}
+{{ entry.richText }}
+</div>
+
+{# {{- atoms.atom('text', 'content', {
+    content: entry.richText,
+    utilities: '',
+}) -}} #}

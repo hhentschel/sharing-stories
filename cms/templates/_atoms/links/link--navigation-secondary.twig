@@ -1,0 +1,62 @@
+{%- extends '_atoms/links/_link--props' -%}
+{%- import '_macros/atomic' as ions -%}
+{%- import '_macros/atomic' as atoms -%}
+{%- import '_macros/functions' as parse -%}
+
+{#
+    ### PROPERTIES ###
+    ------------------
+    
+    INHERITED FROM: `_atoms/links/link--props.twig`
+
+    EXTENDED
+    --------
+    counter: (number) -- counter value
+
+    ### FUNCTIONS ###
+    -----------------
+    ga: parse google analytics attributes
+#}
+
+{%- block link -%}
+
+    {%- set props = props.merge({
+        slug: options.slug ??? null,
+        counter: options.counter ??? null,
+    })-%}
+
+    {%- set classes = {
+        link: collect({
+            animate: 'transition-all',
+            color: (('/' ~ props.get('slug') ~ '/') in craft.app.request.absoluteUrl or craft.app.request.absoluteUrl == props.get('url')) ? 'text-orange-500' : 'text-black',
+            display: 'inline-flex',
+            font: 'font-primary text-base tracking-wide',
+            focus: 'focus:ring-2 focus:ring-celestial-500 focus:outline-none',
+            hover: 'hover:text-orange-500',
+            padding: 'px-3 lg:px-0 space-x-2',
+            utilities: props.get('utilities'),
+        }),
+    }-%}
+
+    {%- minify -%}
+        <a 
+            href="{{- props.get('url') -}}" 
+            class="{{- classes.link.implode(' ') -}}"
+            target="{{- props.get('target') -}}"
+            aria-label="{{- props.get('label') ~ ' ' ~ props.get('counter') ?? props.get('counter') }}"
+            {{ parse.ga(props.get('ga')) }}
+            {{ craft.app.request.absoluteUrl == props.get('url') ? 'aria-current="page"' : ''}}
+        >
+            <span>
+                {{- props.get('text')|striptags|typogrify(true)|raw -}}
+            </span>
+
+            {%- if props.get('counter') -%}
+                {{- atoms.atom('counter', 'primary' , {
+                    text: props.get('counter'),
+                }) -}}
+            {%- endif -%}
+        </a>
+    {%- endminify -%}
+    
+{%- endblock -%}

@@ -1,0 +1,62 @@
+{%- extends '_atoms/links/_link--props' -%}
+{%- import '_macros/atomic' as atoms -%}
+{%- import '_macros/atomic' as ions -%}
+{%- import '_macros/functions' as parse -%}
+
+{#
+    ### PROPERTIES ###
+    ------------------
+    
+    INHERITED FROM: `_atoms/links/link--props.twig`
+
+    ### FUNCTIONS ###
+    -----------------
+    ga: parse google analytics attributes
+#}
+
+{%- block link -%}
+    {%- set props = props.merge({
+        icon: options.icon ??? null,
+        slug: options.slug ??? null
+    }) -%}
+
+    {%- set classes = collect({
+        animation: 'transition-colors duration-200 ease-in-out',
+        cursor: 'cursor-pointer',
+        focus: 'focus:bg-sky-blue-200',
+        font: 'font-primary font-semibold text-lg tracking-wide leading-tight',
+        display: 'inline-flex flex-col w-full',
+        hover: 'hover:bg-sky-blue-200',
+        layout: 'rounded-md',
+        padding: 'p-4',
+        utilities: props.get('utilities')
+    }) -%}
+
+    <a 
+        href="{{- props.get('url') -}}" 
+        class="{{- classes.implode(' ') -}}"
+        :class="focusedSlug == '{{- props.get('slug') -}}' ? 'bg-sky-blue-200' : ''"
+        {{ parse.ga(props.get('ga')) }}
+        aria-hidden="true"
+        tabindex="-1"
+    >
+        <span class="flex items-center">
+            {%- if props.get('icon') -%}
+                {{- atoms.atom('icon', 'fa', {
+                    icon: props.get('icon'),
+                    type: 'fa-regular',
+                    color: 'black',
+                    size: 'xl',
+                    utilities: 'pr-1.5'
+                }) -}}
+            {%- endif -%}
+            {{- ions.ion('text', 'link', {
+                content: props.get('text'),
+            }) -}}
+        </span>
+        {{- ions.ion('text', 'link-description', {
+            content: props.get('description'),
+            utilities: 'pt-2 block w-full line-clamp-2'
+        }) -}}
+    </a>
+{%- endblock -%}

@@ -1,8 +1,14 @@
 defaultPlacement: end
 enableVersioning: true
 entryTypes:
-  - fc95636f-567a-49fe-a410-86de9a5ea3cc # Landingpage
-  - fedb00ce-c6fb-4ef7-ba11-7c52ac8a5510 # Blog-Overview
+  -
+    uid: fc95636f-567a-49fe-a410-86de9a5ea3cc # Landingpage
+  -
+    uid: fedb00ce-c6fb-4ef7-ba11-7c52ac8a5510 # Blog-Overview
+  -
+    uid: f94560a1-d54e-44ec-8cbb-f684bf65ff9b # Seiten
+  -
+    uid: b236e35c-4122-4d94-9a4f-44eb5b369bb3 # Kontakt
 handle: pages
 maxAuthors: 2
 name: Pages
@@ -20,7 +26,17 @@ previewTargets:
         - '1'
 propagationMethod: all
 siteSettings:
-  b770f7e5-3411-4c52-91e3-c5929d334207: # CraftDev
+  2026b2ea-f645-425d-9940-6f03a71bc9b5: # Abchasisch
+    enabledByDefault: true
+    hasUrls: true
+    template: _routers/router--page.twig
+    uriFormat: '{slug}'
+  b770f7e5-3411-4c52-91e3-c5929d334207: # Deutsch
+    enabledByDefault: true
+    hasUrls: true
+    template: _routers/router--page.twig
+    uriFormat: '{slug}'
+  ee568fdc-7118-4dab-92e8-453bd4bcbfd3: # Russisch
     enabledByDefault: true
     hasUrls: true
     template: _routers/router--page.twig

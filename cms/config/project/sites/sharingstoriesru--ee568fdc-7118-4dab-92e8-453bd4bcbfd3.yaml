@@ -1,0 +1,9 @@
+baseUrl: $RU_SITE_URL
+enabled: '1'
+handle: sharingstoriesru
+hasUrls: true
+language: ru
+name: Russisch
+primary: false
+siteGroup: c5802e19-dd44-4571-acdd-fe94744fa402 # RU
+sortOrder: 2
