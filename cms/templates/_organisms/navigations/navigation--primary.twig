@@ -146,12 +146,12 @@
                             icon: 'fa-language',
                         }) -}} #}
 
-                        {# {{- atoms.atom('text', 'body' , {
+                        {{- atoms.atom('text', 'body' , {
                             content: craft.app.sites.currentSite,
                             type: 'large',
                             color: _globals.get('theme') == 'light' ? 'text-white' : 'text-black',
                             utilities: 'font-bold'
-                        }) -}} #}
+                        }) -}}
                     </button>
 
                     {%- include '_organisms/navigations/navigation--language' ignore missing with {

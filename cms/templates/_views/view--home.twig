@@ -1,9 +1,9 @@
 {%- import '_macros/atomic' as atoms -%}
 
-<div class="container bg-amber-100 flex flex-wrap p-8 rounded mt-6 mb-12">
+<div class="container bg-amber-100 flex flex-wrap gap-4 rounded mt-6 mb-12">
 
 
-    <div class="mb-2 flex flex-wrap w-6/12 gap-8 text-lg">
+    <div class="w-6/12 text-lg">
          {{- atoms.atom('image', 'hero',  {
                 image: entry.imageHero.eagerly().collect.first,
                 sizes: '40vw',
@@ -12,7 +12,7 @@
             }) -}}
     </div>
 
-    <div class="mb-2 flex flex-wrap w-6/12 text-xl">
+    <div class="flex flex-wrap text-[18px] pt-4">
         {{ entry.longformContent }}
     </div>
 </div>

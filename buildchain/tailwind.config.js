@@ -32,6 +32,7 @@ module.exports = {
       colors: {
         'brand': '#253900',
         'header': '#08CB00',
+        'footer': '#253900',
         'nav-link': '#253900',
         'nav-link-active': '#000011',
         'custom': {
