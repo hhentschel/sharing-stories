@@ -44,12 +44,22 @@
                 {%- endif -%}
             {%- endif -%}
 
+            {%- set customLabels = {
+                'ka': 'ab',
+                'de': 'de',
+                'ru': 'ru',
+            } -%}
+            
+            {%- set languageCode = site.language|slice(0,2)|lower -%}
+            {%- set displayLabel = customLabels[languageCode] ??? languageCode -%}
+            
             {%- set switcherLinks = switcherLinks.push({
                 url: url,
                 title: title,
                 countryCode: site.language|split('-')|last,
                 current: site.id == currentSite.id ? true : false,
                 language: site.language,
+                displayLabel: displayLabel,
             }) -%}
         {%- endif -%}
     {%- endfor -%}
@@ -68,8 +78,8 @@
                         <li>
                             {{- atoms.atom('link', 'navigation-footer', {
                                 url: switcherLink.url ~ (craft.app.request.getQueryStringWithoutPath() | length > 0 ? '?' ~ craft.app.request.getQueryStringWithoutPath() : ''),
-                                text: switcherLink.language|slice(0,2)|lower,
-                                utilities: 'px-4 block w-full',
+                                text: switcherLink.displayLabel,
+                                utilities: 'px-4 block w-full' ~ (switcherLink.current ? ' underline font-semibold' : ''),
 
                             }) -}}
                         </li>

@@ -115,6 +115,19 @@
                         class="{{- classes.get('navigationUlPrimary').implode(' ') -}}"
                         id="mobile-navigation"
                     >
+                        {# Homepage link as first item #}
+                        <li class="{{- classes.get('navigationItemsPrimary').implode(' ') -}}">
+                            <div class="flex w-full grow">
+                                {{- atoms.atom('link', 'navigation-primary', {
+                                    url: '/',
+                                    text: 'Home',
+                                    target: '_self',
+                                    slug: 'home',
+                                    utilities: 'h-full'
+                                }) -}}
+                            </div>
+                        </li>
+                        
                         {%- for item in navigation -%}
                             <li
                                 class="{{- classes.get('navigationItemsPrimary').implode(' ') -}}"
