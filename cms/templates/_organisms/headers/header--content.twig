@@ -15,7 +15,7 @@
         <header class="{{ classes.implode(' ') }}">
                 <div class="header__content relative z-10 flex justify-between">
                     <div>
-                        {{- props.get('content')|striptags('<strong>')|typogrify()|raw -}}
+                        {{- props.get('content')|striptags('<strong><a>')|typogrify()|raw -}}
                     </div>
                 </div>
                 {# <div class="header__bg">
