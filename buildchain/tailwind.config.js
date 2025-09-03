@@ -33,7 +33,7 @@ module.exports = {
         'brand': '#253900',
         'header': '#08CB00',
         'nav-link': '#253900',
-        'nav-link-active': '#000000',
+        'nav-link-active': '#000011',
         'custom': {
             50: '#fef2f2',
             100: '#fee2e2',
