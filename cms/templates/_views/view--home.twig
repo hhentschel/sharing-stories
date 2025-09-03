@@ -1,26 +1,29 @@
 {%- import '_macros/atomic' as atoms -%}
 
-<div class="container bg-amber-100 flex flex-wrap p-10">
+<div class="container bg-amber-100 flex flex-wrap p-8 rounded mt-6 mb-12">
 
-    <div class="mb-10 flex flex-wrap w-6/12 gap-8 text-lg">
-        {{ entry.longformContent }}
 
+    <div class="mb-2 flex flex-wrap w-6/12 gap-8 text-lg">
          {{- atoms.atom('image', 'hero',  {
                 image: entry.imageHero.eagerly().collect.first,
-                sizes: '50vw',
+                sizes: '40vw',
                 placeholder: 'silhouette',
                 loadingStrategy: 'eager',
             }) -}}
     </div>
+
+    <div class="mb-2 flex flex-wrap w-6/12 text-xl">
+        {{ entry.longformContent }}
+    </div>
 </div>
 
-<div class="container bg-cyan-100">
+<div class="container ">
 
-    {{ entry.title }}| entry.title
+    {{ entry.title }}
 
     <div class="">
-        {# {{ entry.HomeContent }} #}
-        view--home
+        {{ entry.HomeContent }}
+        {# view--home #}
 
             {% for block in entry.contentBuilder.all() %}
             {% switch block.type %}

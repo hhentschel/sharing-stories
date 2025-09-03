@@ -40,20 +40,20 @@
         }),
         container: collect({
             animation: '',
-            background: 'bg-red-500',
+            background: '',
             hover: 'group-hover/header:bg-white',
             container: 'container max-w-screen-2xl',
-            flex: 'flex items-center justify-between',
-            rounded: '',
-            position: 'relative',
-            spacing: 'lg:space-l-4 xl:space-x-10 ',
+            flex: 'flex justify-between',
+            rounded: 'rounded',
+            position: 'relative top-2 left-0',
+            spacing: 'lg:space-l-4 xl:space-x-0 ',
         }),
 
         navigationItemsPrimary: collect({
             group: 'group',
             text: 'lg:text-center',
             flex: 'lg:flex',
-            size: 'w-full lg:h-[65px] lg:w-auto'
+            size: 'w-full lg:h-auto lg:w-auto'
         }),
         navigationUl: collect({
             display: 'flex grow items-center',
@@ -69,11 +69,11 @@
         }),
         navigation : collect({
             position: 'z-20',
-            flex: 'flex items-center w-full min-h-[65px]',
+            flex: 'flex w-full min-h-[65px]',
         }),
         language: collect({
             flex: 'flex items-center',
-            position: 'absolute right-10 bottom',
+            position: 'absolute right-0 bottom',
         }),
         languageLabel: collect({
             color: _globals.get('theme') == 'light' ? 'text-white' : 'text-black',
@@ -91,7 +91,7 @@
         >
             <div class="{{- classes.get('container').implode(' ') -}}">
                 <nav class="{{- classes.get('navigation').implode(' ') -}}" aria-label="Primary Navigation">
-                    <span
+                    {# <span
                         class="{{- classes.get('logoWrapper').implode(' ') -}}"
                     >
                         <a href="#page" class="sr-only focus:not-sr-only focus:ring-2 focus:ring-celestial-500 focus:outline-none">
@@ -100,16 +100,16 @@
 
                         <a
                             href="{{- siteUrl -}}"
-                            {# title="{{- seomatic.site.siteName -}}" #}
+                            title="{{- seomatic.site.siteName -}}"
 
                             class="grow-0 relative block z-10 !ml-0 focus:ring-2 focus:ring-celestial-500 focus:outline-none"
                         >
-                            {# {{- atoms.atom('brand-item', 'logo', {
+                            {{- atoms.atom('brand-item', 'logo', {
                                 svg: branding.logo.collect.first,
                                 utilities: 'h-8',
-                            }) -}} #}
+                            }) -}}
                         </a>
-                    </span>
+                    </span> #}
 
                     <ul
                         class="{{- classes.get('navigationUlPrimary').implode(' ') -}}"

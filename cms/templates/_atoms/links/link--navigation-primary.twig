@@ -28,15 +28,15 @@
 
     {%- set classes = {
         link: collect({
-            active: 'active:text-orange-500',
-            color: (('/' ~ props.get('slug') ~ '/') in craft.app.request.absoluteUrl or craft.app.request.absoluteUrl == props.get('url')) ? 'text-orange-600' : 'text-black',
+            active: 'active:text-nav-link-active',
+            color: (('/' ~ props.get('slug') ~ '/') in craft.app.request.absoluteUrl or craft.app.request.absoluteUrl == props.get('url')) ? 'text-nav-link-active underline' : 'text-nav-link',
             animation: 'transition-colors duration-200 ease-in-out',
             cursor: props.get('url') ? 'cursor-pointer' : 'pointer-events-none',
             display: 'flex lg:items-center lg:justify-center w-full grow relative z-30 group',
-            focus: 'focus:ring-2 focus:ring-celestial-500 focus:outline-none focus:text-orange-500 group-focus:text-orange-500',
-            hover: 'group-hover:text-orange-500 hover:text-orange-500',
-            font: 'font-primary font-medium text-base lg:text-sm xl:text-base tracking-wide',
-            padding: 'pl-2.5 pr-4 py-2 lg:py-0 lg:px-2 xl:px-4 space-x-2',
+            focus: 'focus:ring-2 focus:ring-celestial-500 focus:outline-none focus:text-blue-500',
+            hover: 'group-hover:text-orange-200 hover:text-orange-200',
+            font: 'font-primary font-bold text-[24px] lg:text-[20px] xl:text-[24px] tracking-wide',
+            padding: 'pl-2.5 pr-4 py-0 lg:py-0 lg:px-8 xl:px-4 space-x-4',
             utilities: props.get('utilities'),
             whitespace: 'whitespace-nowrap lg:whitespace-normal 2xl:whitespace-nowrap',
         }),
