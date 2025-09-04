@@ -4,7 +4,7 @@ entryTypes:
   -
     uid: 867399f9-5cee-4f95-836b-a04cc7bc2639 # Header
 handle: header
-maxAuthors: 1
+maxAuthors: 2
 name: Header
 previewTargets:
   -

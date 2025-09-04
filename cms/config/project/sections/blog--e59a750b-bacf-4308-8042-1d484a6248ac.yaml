@@ -4,7 +4,7 @@ entryTypes:
   -
     uid: 9522a7a6-0ee3-42e2-a4b4-bd2f691c2c4d # Blog
 handle: blog
-maxAuthors: 1
+maxAuthors: 2
 name: Blog
 previewTargets:
   -

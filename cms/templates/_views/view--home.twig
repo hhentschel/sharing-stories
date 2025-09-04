@@ -1,28 +1,31 @@
 {%- import '_macros/atomic' as atoms -%}
 
-<div class="container bg-amber-100 flex flex-wrap gap-4 rounded mt-6 mb-12">
+<div class="container">
+<div class=" bg-slate-200 p-6 rounded mt-6 mb-12">
+    {{ entry.title }}
+</div>
+<div class=" bg-amber-100 columns-2 gap-4 rounded mt-6 mb-12">
 
 
-    <div class="w-6/12 text-lg">
+    <div class="text-lg">
          {{- atoms.atom('image', 'hero',  {
                 image: entry.imageHero.eagerly().collect.first,
-                sizes: '40vw',
+                sizes: '30vw',
                 placeholder: 'silhouette',
                 loadingStrategy: 'eager',
             }) -}}
     </div>
 
-    <div class="flex flex-wrap text-[18px] pt-4">
-        {{ entry.longformContent }}
+    <div class="text-[18px] pt-4">
+        {# {{ entry.longformContent }} #}
+         {{ entry.HomeContent }}
     </div>
 </div>
 
-<div class="container ">
 
-    {{ entry.title }}
 
     <div class="">
-        {{ entry.HomeContent }}
+
         {# view--home #}
 
             {% for block in entry.contentBuilder.all() %}
@@ -31,12 +34,15 @@
                 {% case "cta" %}
                 {{ block.render() }}
 
+                <div class="inline-block">
                 {% case "richText" %}
                 {{ block.render() }}
+                </div>
 
+                <div class="columns-2 lg:columns-3 gap-4">
                 {% case "images" %}
                 {{ block.render() }}
-
+                </div>
                 {% case "featureList" %}
                 {{ block.render({ loop, themeColor: "lightblue" }) }}
 

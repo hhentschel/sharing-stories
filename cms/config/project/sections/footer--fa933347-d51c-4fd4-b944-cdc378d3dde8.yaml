@@ -4,7 +4,7 @@ entryTypes:
   -
     uid: b64266e0-f780-4789-82af-577ebebb1372 # Footer
 handle: footer
-maxAuthors: 1
+maxAuthors: 2
 name: Footer
 previewTargets:
   -

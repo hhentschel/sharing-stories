@@ -62,8 +62,8 @@
         navigationUlPrimary: collect({
             background: ' lg:bg-transparent',
             flex: 'lg:flex grow items-center',
-            padding: 'p-6 pt-[70px] lg:p-0',
-            position: 'absolute lg:static top-0 left-0',
+            padding: 'p-6 pt-[20px] lg:p-0',
+            position: 'lg:static top-0 left-0',
             space: 'lg:space-x-2',
             size: 'w-full max-w-[330px] max-h-[80vh] overflow-auto scrollbar-hide lg:max-h-full lg:overflow-visible lg:max-w-full lg:w-auto lg:h-auto',
         }),
@@ -127,7 +127,7 @@
                                 }) -}}
                             </div>
                         </li>
-                        
+
                         {%- for item in navigation -%}
                             <li
                                 class="{{- classes.get('navigationItemsPrimary').implode(' ') -}}"

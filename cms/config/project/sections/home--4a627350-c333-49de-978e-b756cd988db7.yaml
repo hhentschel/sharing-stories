@@ -4,7 +4,7 @@ entryTypes:
   -
     uid: a2c173c5-4b31-4338-86ee-a0cb4aafc12b # Home
 handle: home
-maxAuthors: 1
+maxAuthors: 2
 name: Home
 previewTargets:
   -

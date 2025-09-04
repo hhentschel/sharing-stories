@@ -1,6 +1,8 @@
 color: null
+description: null
 fieldLayouts:
   6083208f-2753-41dd-ad9c-e06a5d7374cf:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -49,23 +51,6 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 6d325db3-262d-4faa-b5b7-893cb866cf87
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2025-08-08T13:38:17+00:00'
-            editCondition: null
-            elementCondition: null
-            fieldUid: a85b4d7b-b0c6-4e40-ba90-eeeab955ac52 # Title
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: d272a57e-295e-4009-b19e-35196941959d
             userCondition: null
             warning: null
             width: 100

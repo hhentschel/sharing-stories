@@ -1,6 +1,6 @@
 {%- import '_macros/atomic' as atoms -%}
 
-<div class="my-5 flex">
+<div class="">
 {# {{- atoms.atom('image', 'content',  {
     image: entry.imageContent.one(),
     sizes: '50vw',
@@ -12,10 +12,11 @@
  {% for image in entry.imageContent %}
 {{- atoms.atom('image', 'content',  {
     image: image,
-    sizes: '50vw',
+    sizes: '35vw',
     placeholder: 'image',
     caption: entry.caption,
-    loadingStrategy: 'lazy'
+    loadingStrategy: 'lazy',
+
 }) -}}
 {% endfor %}
 

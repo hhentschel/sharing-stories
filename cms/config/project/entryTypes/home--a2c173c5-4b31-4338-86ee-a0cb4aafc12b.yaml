@@ -75,23 +75,6 @@ fieldLayouts:
             dateAdded: '2025-08-29T09:19:15+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: f53223cc-170a-472c-9561-2f22df16bc96 # Longform Content
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: ce4e5c27-e8b7-447f-82b1-2d4387d53855
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2025-08-29T09:19:15+00:00'
-            editCondition: null
-            elementCondition: null
             fieldUid: 6a8579a0-7f72-41c9-9a9b-4d6d4f5ad746 # Content Builder
             handle: null
             includeInCards: false

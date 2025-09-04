@@ -1,4 +1,4 @@
-dateModified: 1756459155
+dateModified: 1756993023
 elementSources:
   craft\elements\Entry:
     -
@@ -35,7 +35,7 @@ elementSources:
         - revisionNotes
       type: native
     -
-      key: 'section:e68167e4-15ab-4aee-93ff-881ea72b1cad' # Artikel Konzept
+      key: 'section:e68167e4-15ab-4aee-93ff-881ea72b1cad'
       type: native
     -
       key: 'section:86f4b979-439d-4d67-8e6d-053a5ddf4c89' # Pages
@@ -171,7 +171,6 @@ meta:
     e57dd80e-fbbb-45c8-9086-b5a5368c2429: 'Image Hero' # Image Hero
     e59a750b-bacf-4308-8042-1d484a6248ac: Blog # Blog
     e96d7c98-3659-4dac-834a-9b3875e19d3b: Simple # Simple
-    e68167e4-15ab-4aee-93ff-881ea72b1cad: 'Artikel Konzept' # Artikel Konzept
     eda1d68b-3d84-43a4-8e0b-88fccb194079: 'Image Content Optimized' # Image Content Optimized
     ee568fdc-7118-4dab-92e8-453bd4bcbfd3: Russisch # Russisch
     f53223cc-170a-472c-9561-2f22df16bc96: 'Longform Content' # Longform Content
