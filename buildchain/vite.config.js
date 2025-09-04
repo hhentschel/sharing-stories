@@ -27,19 +27,19 @@ export default defineConfig(({command}) => ({
     }
   },
   plugins: [
-    critical({
-      criticalUrl: 'https://sharing-stories.net',
-      criticalTimeout: 30000,
-      ignoreInlinedStyles: true,
-      criticalBase: '../web/dist/criticalcss/',
-      criticalPages: [
-        {
-          uri: '/',
-          template: 'index',
-        }
-      ],
-      criticalConfig: {},
-    }),
+    // critical({
+    //   criticalUrl: 'https://sharing-stories.net',
+    //   criticalTimeout: 30000,
+    //   ignoreInlinedStyles: true,
+    //   criticalBase: '../web/dist/criticalcss/',
+    //   criticalPages: [
+    //     {
+    //       uri: '/',
+    //       template: 'index',
+    //     }
+    //   ],
+    //   criticalConfig: {},
+    // }),
     legacy({
       targets: ['defaults', 'not IE 11'],
     }),
