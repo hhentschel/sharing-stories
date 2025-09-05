@@ -1,4 +1,4 @@
-dateModified: 1756993023
+dateModified: 1757057271
 elementSources:
   craft\elements\Entry:
     -
@@ -147,11 +147,13 @@ meta:
     2026b2ea-f645-425d-9940-6f03a71bc9b5: Abchasisch # Abchasisch
     7601d3fa-9b2e-43fb-9b7a-d31bdc9d1e90: Tabelle # Tabelle
     9522a7a6-0ee3-42e2-a4b4-bd2f691c2c4d: Blog # Blog
+    36580dc2-b3e7-4432-9060-5b6939837f41: iFrame # iFrame
     867399f9-5cee-4f95-836b-a04cc7bc2639: Header # Header
     72555363-9815-48cd-bcce-d855765e7d66: 'Plain Text' # Plain Text
     73392818-36d0-419a-a731-d65ac4927ebc: 'Public Schema' # Public Schema
     a2c173c5-4b31-4338-86ee-a0cb4aafc12b: Home # Home
     a85b4d7b-b0c6-4e40-ba90-eeeab955ac52: Title # Title
+    ad315a89-9d71-44be-90fe-f72c90181982: iFrame # iFrame
     b3f3c321-3167-4f74-8f3e-a3a6a7b75f96: Description # Description
     b236e35c-4122-4d94-9a4f-44eb5b369bb3: Kontakt # Kontakt
     b770f7e5-3411-4c52-91e3-c5929d334207: Deutsch # Deutsch

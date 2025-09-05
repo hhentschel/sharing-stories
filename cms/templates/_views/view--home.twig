@@ -39,6 +39,11 @@
                 {{ block.render() }}
                 </div>
 
+                <div class="inline-block">
+                {% case "iframe" %}
+                {{ block.render() }}
+                </div>
+
                 <div class="columns-2 lg:columns-3 gap-4">
                 {% case "images" %}
                 {{ block.render() }}
@@ -53,6 +58,8 @@
                 {{ block.render() }}
 
                 {% default %}
+
+
 
 
             {% endswitch %}

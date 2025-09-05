@@ -1,0 +1,24 @@
+{# {%- extends '_atoms/texts/_text--props' -%}
+{%- import '_macros/atomic' as atoms -%} #}
+
+
+{% set titleIframe = entry.title %}
+{% set iframe = entry.iframe %}
+{% set caption = entry.caption %}
+
+<figure class="iframe">
+    {% if titleIframe %}
+        <h2>
+            {{ titleIframe }}
+        </h2>
+    {% endif %}
+    <div class="aspect-video">
+        {{ iframe|raw }}
+    </div>
+
+    {% if caption %}
+        <figcaption class="iframe__caption">
+            {{ caption }}
+        </figcaption>
+    {% endif %}
+</figure>

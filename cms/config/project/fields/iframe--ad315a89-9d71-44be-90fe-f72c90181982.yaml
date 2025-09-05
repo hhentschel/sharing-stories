@@ -1,0 +1,16 @@
+columnSuffix: null
+handle: iframe
+instructions: null
+name: iFrame
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: language
+type: craft\fields\PlainText

@@ -6,13 +6,64 @@ searchable: false
 settings:
   createButtonLabel: 'neues Element'
   defaultIndexViewMode: cards
+  enableVersioning: false
   entryTypes:
-    - 3afe3600-f29a-4409-9b22-764f71a881c5 # Rich Text
-    - ca82ce19-1d0f-494a-b0e9-79eab0ba3665 # CTA
-    - 9f8d5177-949f-420b-be9a-2f552d514a68 # Images
-    - 26db054c-db10-4316-b753-0544f54f6710 # Related Entries
-    - 2a3500d7-9902-4400-9a6d-7564e565cd9d # Feature List
-    - 7601d3fa-9b2e-43fb-9b7a-d31bdc9d1e90 # Tabelle
+    -
+      __assoc__:
+        -
+          - uid
+          - 3afe3600-f29a-4409-9b22-764f71a881c5 # Rich Text
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - ca82ce19-1d0f-494a-b0e9-79eab0ba3665 # CTA
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 9f8d5177-949f-420b-be9a-2f552d514a68 # Images
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 26db054c-db10-4316-b753-0544f54f6710 # Related Entries
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 2a3500d7-9902-4400-9a6d-7564e565cd9d # Feature List
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 7601d3fa-9b2e-43fb-9b7a-d31bdc9d1e90 # Tabelle
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 36580dc2-b3e7-4432-9060-5b6939837f41 # iFrame
+        -
+          - group
+          - General
   includeTableView: false
   maxEntries: null
   minEntries: null
