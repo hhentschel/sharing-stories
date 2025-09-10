@@ -1,6 +1,8 @@
 color: rose
+description: null
 fieldLayouts:
   0f0b0691-5b2e-4734-b9e0-acbe2282f7da:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -10,6 +12,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
+            dateAdded: '2025-09-10T05:38:20+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -24,7 +27,7 @@ fieldLayouts:
             placeholder: null
             providesThumbs: false
             readonly: false
-            requirable: false
+            required: false
             size: null
             step: null
             tip: null
@@ -35,6 +38,8 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2025-09-10T05:38:20+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 607df1b9-7f1f-461d-85ae-8ff854552412 # Footer
             handle: null
@@ -60,6 +65,6 @@ showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: ''
+titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
