@@ -1,0 +1,28 @@
+
+{%- extends '_atoms/images/_image--props' -%}
+
+{%- block image -%}
+
+{# {%- set image = props.get('image') ??? null -%} #}
+
+{% set myAssetQuery = craft.assets()
+  .volume('contentgif')
+  .kind('image') %}
+
+  {% set imagesGif = myAssetQuery.all() %}
+
+{% minify %}
+
+  {% for imagegif in imagesGif %}
+  <img
+    src="{{ url(imagegif.getUrl(''), { v: imagegif.dateModified.timestamp }) }}"
+    alt="{{ props.get('alt') ?? imagegif.title }}"
+    class="object-cover aspect-3/2 {{ props.get('utilitiesImage') }}"
+    loading="{{ props.get('loadingStrategy')|default('lazy') }}"
+    fetchpriority="high"
+  >
+  {% endfor %}
+
+{% endminify %}
+
+{%- endblock -%}

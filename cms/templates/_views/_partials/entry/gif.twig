@@ -1,0 +1,15 @@
+{%- import '_macros/atomic' as atoms -%}
+
+<div class="">
+{% for image in entry.imageContentGif %}
+{{- atoms.atom('image', 'gif',  {
+    image: image,
+    sizes: '35vw',
+    placeholder: 'image',
+    caption: entry.caption,
+    loadingStrategy: 'lazy',
+
+}) -}}
+{% endfor %}
+
+</div>

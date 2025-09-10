@@ -34,20 +34,31 @@
                 {% case "cta" %}
                 {{ block.render() }}
 
-                <div class="inline-block">
                 {% case "richText" %}
-                {{ block.render() }}
-                </div>
-
                 <div class="inline-block">
-                {% case "iframe" %}
                 {{ block.render() }}
                 </div>
 
-                <div class="columns-2 lg:columns-3 gap-4">
-                {% case "images" %}
+                {% case "iframe" %}
+                <div class="block">
                 {{ block.render() }}
                 </div>
+
+                {% case "iframeSound" %}
+                <div class="block">
+                {{ block.render() }}
+                </div>
+
+                {% case "images" %}
+                <div class="columns-2 lg:columns-3 gap-4">
+                {{ block.render() }}
+                </div>
+
+                 {% case "gif" %}
+                <div class="gif">
+                {{ block.render() }}
+                </div>
+
                 {% case "featureList" %}
                 {{ block.render({ loop, themeColor: "lightblue" }) }}
 
