@@ -33,6 +33,7 @@ return GeneralConfig::create()
     ->runQueueAutomatically(App::env('CRAFT_RUN_QUEUE_AUTOMATICALLY'))
     ->securityKey(App::env('CRAFT_SECURITY_KEY'))
     ->disallowRobots(App::env('CRAFT_DISALLOW_ROBOTS'))
+    ->transformGifs(false)
     // Craft config settings from constants
     ->cpTrigger('cp')
     ->defaultTokenDuration('P1D')
