@@ -64,6 +64,22 @@ settings:
         -
           - group
           - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 3823dd93-81bc-47aa-8fd9-c5de01cff3a6 # iFrame Sound
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 2b8b4781-f0a4-4e21-9e66-2dc6b287f563 # Gif
+        -
+          - group
+          - General
   includeTableView: false
   maxEntries: null
   minEntries: null

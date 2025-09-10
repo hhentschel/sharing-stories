@@ -12,6 +12,8 @@ settings:
       -
         - imageOptimizeContent
         - '*'
+  ignoreFilesOfType:
+    - image/gif
   variants:
     -
       __assoc__:

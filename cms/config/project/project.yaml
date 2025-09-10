@@ -1,4 +1,4 @@
-dateModified: 1757057271
+dateModified: 1757481513
 elementSources:
   craft\elements\Entry:
     -
@@ -63,6 +63,13 @@ email:
   fromName: CraftDev
   transportType: craft\mail\transportadapters\Sendmail
 fs:
+  contentGif:
+    hasUrls: true
+    name: 'Content GIF'
+    settings:
+      path: '@basePath/content-files/images/content'
+    type: craft\fs\Local
+    url: '@weburl/content-files/images/content'
   contentimages:
     hasUrls: true
     name: 'Content Images'
@@ -125,6 +132,7 @@ meta:
     0e3ab7e8-caf3-452c-8e42-b55d64f24026: 'Artikel Tech' # Artikel Tech
     1ecc4fa4-7e2d-4364-b61c-3a77a8f22390: 'Footer Content' # Footer Content
     2a3500d7-9902-4400-9a6d-7564e565cd9d: 'Feature List' # Feature List
+    2b8b4781-f0a4-4e21-9e66-2dc6b287f563: Gif # Gif
     2b282624-7e65-477f-b41e-be03e7181f7f: Feature # Feature
     3afe3600-f29a-4409-9b22-764f71a881c5: 'Rich Text' # Rich Text
     3bc6942f-4e9a-4317-bb3c-72468b36c388: Feature # Feature
@@ -132,6 +140,7 @@ meta:
     5ba7464f-2767-483b-8cdb-a89f28b8c6cf: 'Image Teaser' # Image Teaser
     5c8dd4ed-8488-4d87-b11b-af5c7d46da6e: 'Longform Content' # Longform Content
     6a8579a0-7f72-41c9-9a9b-4d6d4f5ad746: 'Content Builder' # Content Builder
+    7d251175-d149-4d98-ab89-34357ec69354: ContentGif # ContentGif
     7f7786f6-16c1-492d-a101-0056402404ef: 'Image Teaser Optimized' # Image Teaser Optimized
     9dc35b77-87de-4411-91b1-05d093c994b9: Caption # Caption
     9f8d5177-949f-420b-be9a-2f552d514a68: Images # Images
@@ -145,6 +154,7 @@ meta:
     607df1b9-7f1f-461d-85ae-8ff854552412: Footer # Footer
     1230e3f3-1ac1-4b89-9150-35cbf1f39ff2: 'Image Hero Optimized' # Image Hero Optimized
     2026b2ea-f645-425d-9940-6f03a71bc9b5: Abchasisch # Abchasisch
+    3823dd93-81bc-47aa-8fd9-c5de01cff3a6: 'iFrame Sound' # iFrame Sound
     7601d3fa-9b2e-43fb-9b7a-d31bdc9d1e90: Tabelle # Tabelle
     9522a7a6-0ee3-42e2-a4b4-bd2f691c2c4d: Blog # Blog
     36580dc2-b3e7-4432-9060-5b6939837f41: iFrame # iFrame
@@ -154,6 +164,7 @@ meta:
     a2c173c5-4b31-4338-86ee-a0cb4aafc12b: Home # Home
     a85b4d7b-b0c6-4e40-ba90-eeeab955ac52: Title # Title
     ad315a89-9d71-44be-90fe-f72c90181982: iFrame # iFrame
+    af202060-ae94-49c1-add7-bec05e6b6bb7: 'Image Content Gif' # Image Content Gif
     b3f3c321-3167-4f74-8f3e-a3a6a7b75f96: Description # Description
     b236e35c-4122-4d94-9a4f-44eb5b369bb3: Kontakt # Kontakt
     b770f7e5-3411-4c52-91e3-c5929d334207: Deutsch # Deutsch
@@ -180,6 +191,7 @@ meta:
     fa933347-d51c-4fd4-b944-cdc378d3dde8: Footer # Footer
     fab38811-fef1-4fc7-a7d4-7aeb3437eb35: 'CTA Url' # CTA Url
     fc95636f-567a-49fe-a410-86de9a5ea3cc: Landingpage # Landingpage
+    fc108085-7d12-470d-8196-d94282860889: 'iFrame Sound' # iFrame Sound
     fedb00ce-c6fb-4ef7-ba11-7c52ac8a5510: Blog-Overview # Blog-Overview
     fff166a9-5cfa-4eb2-aa7c-52a2f34b8a47: 'CTA Text' # CTA Text
 plugins:

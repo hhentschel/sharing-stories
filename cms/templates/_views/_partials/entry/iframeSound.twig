@@ -3,7 +3,7 @@
 
 
 {% set titleIframe = entry.title %}
-{% set iframe = entry.iframe %}
+{% set iframe = entry.iframeSound %}
 {% set caption = entry.caption %}
 
 <figure class="iframe">
@@ -12,7 +12,7 @@
             {{ titleIframe }}
         </h2>
     {% endif %}
-    <div class="aspect-video">
+    <div class="">
         {{ iframe|raw }}
     </div>
 

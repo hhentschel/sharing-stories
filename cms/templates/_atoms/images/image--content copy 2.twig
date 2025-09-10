@@ -6,10 +6,6 @@
 {%- set id = "content-#{random()}-#{props.get('image').id}" -%}
 {%- set image = props.get('image') ??? null -%}
 
-{% set myAssetQuery = craft.assets()
-  .volume('contentgif') %}
-
-  {% set imagesGif = myAssetQuery.all() %}
 
 {% minify %}
 {# {{ image.imageContentOptimized.pictureTag()
@@ -30,15 +26,13 @@
 }} #}
 
 {% if image.extension == 'gif' %}
-{% for imagegif in imagesGif %}
   <img
-    src="{{ url(imagegif.getUrl('')) }}"
+    src="{{ image.url }}"
     alt="{{ props.get('alt') ?? image.title }}"
     class="object-cover aspect-3/2 {{ props.get('utilitiesImage') }}"
     loading="{{ props.get('loadingStrategy')|default('lazy') }}"
     fetchpriority="high"
   >
-  {% endfor %}
 {% else %}
   {{ image.imageContentOptimized.pictureTag()
     .imgAttrs
