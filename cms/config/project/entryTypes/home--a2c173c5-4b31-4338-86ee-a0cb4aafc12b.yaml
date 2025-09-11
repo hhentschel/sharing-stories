@@ -53,7 +53,24 @@ fieldLayouts:
             uid: ec857fce-7a21-4e98-8f41-4aa89d0b144a
             userCondition: null
             warning: null
-            width: 100
+            width: 50
+          -
+            dateAdded: '2025-09-11T19:36:33+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: e49c153e-aba5-4b59-ab1f-da3340c757d2 # Page Background-Color
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fe14059c-faba-4f92-9812-1a5a335f8d21
+            userCondition: null
+            warning: null
+            width: 50
           -
             dateAdded: '2025-08-29T09:17:57+00:00'
             editCondition: null

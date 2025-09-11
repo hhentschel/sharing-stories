@@ -45,7 +45,7 @@
       (props.get('attributes')|merge({
         'sizes': props.get('sizes'),
         'alt': props.get('alt') ?? image.title ?? null,
-        'class': "object-cover aspect-3/2 #{props.get('utilitiesImage')}",
+        'class': "inline-flex object-cover aspect-3/2 #{props.get('utilitiesImage')}",
         'fetchpriority': 'high'
       }))
     .pictureAttrs
