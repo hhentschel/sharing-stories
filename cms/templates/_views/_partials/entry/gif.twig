@@ -1,16 +1,15 @@
 {%- import '_macros/atomic' as atoms -%}
 
-{% set gif = entry.imageContentGif.one() %}
+{% set gifs = entry.imageContentGif.all() %}
 
 
-<div class="">
-
+ {% for gif in gifs %}
   <img
     src="{{gif.url}}"
     class="object-cover aspect-3/2"
     fetchpriority="high"
   >
-
+{% endfor %}
 
 {# {% for image in entry.imageContentGif %}
 {{- atoms.atom('image', 'gif',  {
@@ -23,4 +22,3 @@
 }) -}}
 {% endfor %} #}
 
-</div>

@@ -13,7 +13,7 @@ settings:
   defaultUploadLocationSource: 'volume:7d251175-d149-4d98-ab89-34357ec69354' # ContentGif
   defaultUploadLocationSubpath: null
   maintainHierarchy: false
-  maxRelations: 1
+  maxRelations: null
   minRelations: null
   previewMode: full
   restrictFiles: false
