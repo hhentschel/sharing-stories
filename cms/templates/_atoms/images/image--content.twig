@@ -30,24 +30,24 @@
 }} #}
 
 {% if image.extension == 'gif' %}
-{% for imagegif in imagesGif %}
+{# {% for imagegif in imagesGif %} #}
   <img
-    src="{{ url(imagegif.getUrl('')) }}"
+    src="{{ url(image.getUrl('')) }}"
     alt="{{ props.get('alt') ?? image.title }}"
     class="object-cover aspect-3/2 {{ props.get('utilitiesImage') }}"
     loading="{{ props.get('loadingStrategy')|default('lazy') }}"
     fetchpriority="high"
   >
-  {% endfor %}
+  {# {% endfor %} #}
 {% else %}
   {{ image.imageContentOptimized.pictureTag()
     .imgAttrs
-      ({
+      (props.get('attributes')|merge({
         'sizes': props.get('sizes'),
         'alt': props.get('alt') ?? image.title ?? null,
         'class': "object-cover aspect-3/2 #{props.get('utilitiesImage')}",
         'fetchpriority': 'high'
-      })
+      }))
     .pictureAttrs
       ({
          'class': props.get('utilitiesPicture'),

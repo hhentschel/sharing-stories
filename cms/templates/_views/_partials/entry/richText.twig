@@ -1,8 +1,16 @@
 {# {%- extends '_atoms/texts/_text--props' -%}
 {%- import '_macros/atomic' as atoms -%} #}
-<div>
-{{ entry.title}}
-{{ entry.richText }}
+
+{%- import '_macros/atomic' as atoms -%}
+
+<div class="mt-12 mb-12">
+    <h3 class="mb-3">{{- atoms.atom('text', 'h3' , {
+        alignment: '',
+        content:  entry.title,
+        utilities: 'mb-12',
+    }) -}}</h3>
+
+    {{ entry.richText }}
 </div>
 
 {# {{- atoms.atom('text', 'content', {

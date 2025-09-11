@@ -1,25 +1,23 @@
 columnSuffix: null
-handle: imageContent
+handle: pdf
 instructions: null
-name: 'Image Content'
+name: PDF
 searchable: false
 settings:
   allowSelfRelations: false
-  allowSubfolders: true
+  allowSubfolders: false
   allowUploads: true
-  allowedKinds:
-    - image
-    - pdf
+  allowedKinds: null
   branchLimit: null
   defaultPlacement: end
-  defaultUploadLocationSource: 'volume:cbacf1e2-321f-4024-a6b0-5159a7fa227c' # ImageOptimize - Content
+  defaultUploadLocationSource: 'volume:1e6d36d4-19f3-4281-a81f-5f4d587f5d57' # PDF
   defaultUploadLocationSubpath: null
   maintainHierarchy: false
   maxRelations: null
   minRelations: null
   previewMode: full
-  restrictFiles: true
-  restrictLocation: true
+  restrictFiles: false
+  restrictLocation: false
   restrictedDefaultUploadSubpath: null
   restrictedLocationSource: 'volume:cbacf1e2-321f-4024-a6b0-5159a7fa227c' # ImageOptimize - Content
   restrictedLocationSubpath: null
@@ -29,7 +27,8 @@ settings:
   showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
-  sources: '*'
+  sources:
+    - 'volume:1e6d36d4-19f3-4281-a81f-5f4d587f5d57' # PDF
   targetSiteId: null
   validateRelatedElements: false
   viewMode: list

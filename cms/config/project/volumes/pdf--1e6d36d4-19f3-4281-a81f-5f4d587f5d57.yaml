@@ -1,7 +1,7 @@
-color: fuchsia
-description: null
+altTranslationKeyFormat: null
+altTranslationMethod: none
 fieldLayouts:
-  86318236-b6b1-471d-a064-753341f30e02:
+  4a2b31bb-bf1e-4623-8473-8d66664769a6:
     cardThumbAlignment: end
     tabs:
       -
@@ -12,7 +12,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: '2025-09-11T13:56:18+00:00'
+            dateAdded: '2025-09-10T20:26:59+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -27,38 +27,21 @@ fieldLayouts:
             placeholder: null
             providesThumbs: false
             readonly: false
-            required: false
+            requirable: false
             size: null
             step: null
             tip: null
             title: null
-            type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: f480bc85-d38a-4281-ae5c-eec612173763
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: bf5fc736-5efa-4347-a96a-c44d8d5716ff
             userCondition: null
             warning: null
             width: 100
           -
-            dateAdded: '2025-09-11T13:56:18+00:00'
+            dateAdded: '2025-09-10T20:28:21+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: 72555363-9815-48cd-bcce-d855765e7d66 # Plain Text
-            handle: featureListDescription
-            includeInCards: true
-            instructions: null
-            label: 'Feature List Description'
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: e4223091-2638-4fe1-b054-ad7ae70bbb1c
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2025-09-11T13:56:18+00:00'
-            editCondition: null
-            elementCondition: null
-            fieldUid: 3bc6942f-4e9a-4317-bb3c-72468b36c388 # Feature
+            fieldUid: 9a1a5703-8b07-4afa-9239-840488a3a35a # PDF
             handle: null
             includeInCards: false
             instructions: null
@@ -67,21 +50,19 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 7b8a2f9a-315e-42ec-99e3-9a5a4a1e9497
+            uid: 229934af-d758-46a6-a3c9-aa93b2bba771
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: 90e374f9-8fd6-4e6e-8e21-e7953db56737
+        uid: adbfe100-0d32-4bc3-a166-8b0fd58a5660
         userCondition: null
-handle: featureList
-hasTitleField: true
-icon: list-tree
-name: 'Feature List'
-showSlugField: false
-showStatusField: true
-slugTranslationKeyFormat: null
-slugTranslationMethod: site
-titleFormat: null
+fs: pdf
+handle: pdf
+name: PDF
+sortOrder: 5
+subpath: ''
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+transformFs: pdf
+transformSubpath: ''

@@ -1,0 +1,69 @@
+/* Homepage Grid Layout - 2 rows, 3 columns */
+
+.homepage-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1.5rem; /* 24px gap */
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.homepage-grid-item {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.homepage-grid-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive breakpoints */
+@media (max-width: 768px) {
+  .homepage-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, auto);
+    gap: 1rem;
+    padding: 1rem;
+    min-height: auto;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .homepage-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+
+/* Alternative using Tailwind-style approach */
+.homepage-grid-tailwind {
+  @apply grid grid-cols-3 grid-rows-2 gap-6 min-h-screen p-8;
+}
+
+.homepage-grid-item-tailwind {
+  @apply bg-white rounded-lg p-6 shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200;
+}
+
+/* Responsive for Tailwind version */
+@screen sm {
+  .homepage-grid-tailwind {
+    @apply grid-cols-1 grid-rows-6 gap-4 p-4 min-h-0;
+  }
+}
+
+@screen md {
+  .homepage-grid-tailwind {
+    @apply grid-cols-2 grid-rows-3;
+  }
+}
+
+@screen lg {
+  .homepage-grid-tailwind {
+    @apply grid-cols-3 grid-rows-2;
+  }
+}

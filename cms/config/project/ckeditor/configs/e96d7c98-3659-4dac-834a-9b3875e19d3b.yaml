@@ -3,8 +3,6 @@ headingLevels:
   - 2
   - 3
   - 4
-  - 5
-  - 6
 name: Simple
 toolbar:
   - heading
@@ -12,3 +10,5 @@ toolbar:
   - bold
   - italic
   - link
+  - createEntry
+  - sourceEditing

@@ -1,25 +1,49 @@
 {%- import '_macros/atomic' as atoms -%}
 
 <div class="container">
+{% if entry.title %}
 <div class=" bg-slate-200 p-6 rounded mt-6 mb-12">
     {{ entry.title }}
 </div>
-<div class=" bg-amber-100 columns-2 gap-4 rounded mt-6 mb-12">
+{% endif %}
+<div class="homepage-grid bg-amber-100 columns-2 gap-4 rounded mt-6 mb-12">
 
 
-    <div class="text-lg">
+    {# Create an entry query with the 'section' and 'limit' parameters #}
+{% set myEntryQuery = craft.entries()
+  .section('pages')
+  .limit(10) %}
+
+{# Fetch the entries #}
+{% set entries = myEntryQuery.all() %}
+
+{# Display the entries #}
+{% for entry in entries %}
+  <article>
+    <h1><a href="{{ entry.url }}">{{ entry.title }}
          {{- atoms.atom('image', 'hero',  {
                 image: entry.imageHero.eagerly().collect.first,
                 sizes: '30vw',
                 placeholder: 'silhouette',
                 loadingStrategy: 'eager',
             }) -}}
-    </div>
+    </a></h1>
+  </article>
+{% endfor %}
 
-    <div class="text-[18px] pt-4">
-        {# {{ entry.longformContent }} #}
+    {# <div class="text-lg">
+         {{- atoms.atom('image', 'hero',  {
+                image: entry.imageHero.eagerly().collect.first,
+                sizes: '30vw',
+                placeholder: 'silhouette',
+                loadingStrategy: 'eager',
+            }) -}}
+    </div> #}
+
+    {# <div class="text-[18px] pt-4">
+        {{ entry.longformContent }}
          {{ entry.HomeContent }}
-    </div>
+    </div> #}
 </div>
 
 

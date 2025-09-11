@@ -3,7 +3,7 @@
 
 {%- block image -%}
 
-{# {%- set image = props.get('image') ??? null -%} #}
+{%- set image = props.get('image') ??? null -%}
 
 {% set myAssetQuery = craft.assets()
   .volume('contentgif')
@@ -13,16 +13,19 @@
 
 {% minify %}
 
-  {% for imagegif in imagesGif %}
+  {# {% for imagegif in imagesGif %} #}
   <img
-    src="{{ url(imagegif.getUrl(''), { v: imagegif.dateModified.timestamp }) }}"
-    alt="{{ props.get('alt') ?? imagegif.title }}"
+    src="image.url"
+
     class="object-cover aspect-3/2 {{ props.get('utilitiesImage') }}"
     loading="{{ props.get('loadingStrategy')|default('lazy') }}"
     fetchpriority="high"
   >
-  {% endfor %}
+  {# {% endfor %} #}
 
 {% endminify %}
 
 {%- endblock -%}
+
+
+  {# alt="{{ props.get('alt') ?? image.title }}" #}

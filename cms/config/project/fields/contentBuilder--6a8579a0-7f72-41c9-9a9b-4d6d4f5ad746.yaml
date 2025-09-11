@@ -80,6 +80,14 @@ settings:
         -
           - group
           - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 32ac4396-9f07-4795-9ef4-00a03cf4d899 # PDF
+        -
+          - group
+          - General
   includeTableView: false
   maxEntries: null
   minEntries: null

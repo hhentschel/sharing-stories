@@ -16,7 +16,10 @@
     placeholder: 'image',
     caption: entry.caption,
     loadingStrategy: 'lazy',
-
+          attributes: {
+          'data-modal': true,
+          'data-modal-src': image.getUrl({width: 1920})
+      }
 }) -}}
 {% endfor %}
 

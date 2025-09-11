@@ -42,11 +42,11 @@
         {%- include '_organisms/headers/header--primary' ignore missing -%}
 
         {# -- Navigation --  #}
-       {%- include '_organisms/navigations/navigation--primary' ignore missing with {
+       {# {%- include '_organisms/navigations/navigation--primary' ignore missing with {
             navigation: navigation,
-        } -%}
+        } -%} #}
 
-        <main class="flex justify-between flex-col min-h-screen" id="page-content">
+        <main class="flex justify-between flex-col min-h-screen" id="page-content" style="background-color: {{entry.pageBackgroundColor}};>
 
             {# -- Primary content block -- #}
             <div id="page" class="w-full grow flex flex-col relative" w-ref="page">

@@ -1,15 +1,27 @@
 {%- import '_macros/atomic' as atoms -%}
 
+{% set gif = entry.imageContentGif.one() %}
+
+
 <div class="">
-{% for image in entry.imageContentGif %}
+
+  <img
+    src="{{gif.url}}"
+
+    class="object-cover aspect-3/2 }}"
+    fetchpriority="high"
+  >
+
+
+{# {% for image in entry.imageContentGif %}
 {{- atoms.atom('image', 'gif',  {
-    image: image,
+    image: gif.url,
     sizes: '35vw',
     placeholder: 'image',
     caption: entry.caption,
     loadingStrategy: 'lazy',
 
 }) -}}
-{% endfor %}
+{% endfor %} #}
 
 </div>
