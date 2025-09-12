@@ -23,6 +23,21 @@ module.exports = {
           letterSpacing: '0.06em',
           fontWeight: '700',
       }],
+      'h2-lg': ['3rem', {
+          lineHeight: '1.4',
+          letterSpacing: '0.06em',
+          fontWeight: '700',
+      }],
+      'h2-sm': ['2.5rem', {
+          lineHeight: '1.4',
+          letterSpacing: '0.06em',
+          fontWeight: '700',
+      }],
+      'h2-md': ['2rem', {
+          lineHeight: '1.4',
+          letterSpacing: '0.06em',
+          fontWeight: '700',
+      }],
     },
     container: {
       center: true,

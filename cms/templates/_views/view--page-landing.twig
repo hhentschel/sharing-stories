@@ -9,12 +9,11 @@
     <img src="https://sharing-stories.net/content-files/images/content/arrow.png" alt="Pfeil nach links" class="inline w-[120px] mb-0"/>
 </a>
 
-        <h1 class="mb-12 mt-6">
-            {{- atoms.atom('text', 'h1' , {
+        <h1 class="mb-6 mt-6">
+            {{- atoms.atom('text', 'h2' , {
                     alignment: '',
                     content:  spotlight,
-                    utilities: 'mb-4',
-
+                    utilities: '',
                 }) -}}
         </h1>
 
@@ -24,7 +23,7 @@
             placeholder: 'silhouette',
             loadingStrategy: 'eager',
              utilitiesImage: 'block max-h-[150px] w-auto object-contain',
-            utilitiesPicture: 'max-h-[150px] flex ',
+            utilitiesPicture: 'max-h-[150px] flex mb-12',
         }) -}}
 
          {# {{ entry.contentBuilder }} #}
