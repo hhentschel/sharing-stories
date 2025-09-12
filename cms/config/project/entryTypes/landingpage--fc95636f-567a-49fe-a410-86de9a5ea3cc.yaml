@@ -38,6 +38,23 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2025-09-12T10:17:10+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: e57dd80e-fbbb-45c8-9086-b5a5368c2429 # Image Hero
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 777e063b-d65b-45bf-8237-d4f16b07e0ce
+            userCondition: null
+            warning: null
+            width: 100
+          -
             dateAdded: '2025-09-12T09:23:20+00:00'
             editCondition: null
             elementCondition: null

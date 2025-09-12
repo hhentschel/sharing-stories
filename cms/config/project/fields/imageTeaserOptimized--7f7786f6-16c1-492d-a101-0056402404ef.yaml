@@ -20,7 +20,7 @@ settings:
           - '992'
         -
           - useAspectRatio
-          - '1'
+          - ''
         -
           - aspectRatioX
           - '16'
@@ -44,7 +44,7 @@ settings:
           - '768'
         -
           - useAspectRatio
-          - '1'
+          - ''
         -
           - aspectRatioX
           - '4'
@@ -68,7 +68,7 @@ settings:
           - '576'
         -
           - useAspectRatio
-          - '1'
+          - ''
         -
           - aspectRatioX
           - '4'
