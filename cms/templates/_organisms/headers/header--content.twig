@@ -14,9 +14,9 @@
     {%- minify -%}
         <header class="{{ classes.implode(' ') }}">
                 <div class="header__content container relative z-10 flex justify-between">
-                    <div>
+                    {# <div>
                         {{- props.get('content')|striptags('<strong><a>')|typogrify()|raw -}}
-                    </div>
+                    </div> #}
                 </div>
                 <div class="header__bg">
                  <a href="/">{{- atoms.atom('image', 'hero',  {
@@ -24,7 +24,7 @@
                     sizes: '100vw',
                     placeholder: 'image',
                     loadingStrategy: 'eager',
-                    utilitiesImage: 'w-full h-full',
+                    utilitiesImage: 'w-full h-full p-6',
                     utilitiesPicture: 'header__bg-image'
                 }) -}}</a>
                 </div>
