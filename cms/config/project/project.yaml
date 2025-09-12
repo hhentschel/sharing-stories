@@ -1,4 +1,4 @@
-dateModified: 1757627147
+dateModified: 1757664831
 elementSources:
   craft\elements\Entry:
     -
@@ -221,7 +221,7 @@ plugins:
   image-optimize:
     edition: standard
     enabled: true
-    licenseKey: IK1W8HDR7QSTOFREMNEVPXEC
+    licenseKey: R4FEYXGOW28U9E544PR4PG6F
     schemaVersion: 1.0.0
     settings:
       allowUpScaledImageVariants: true
