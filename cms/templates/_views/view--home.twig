@@ -40,12 +40,15 @@
 {% for entry in entries %}
   <article>
     <h1><a href="{{ entry.url }}">{{ entry.title }}
+    {% if entry.imageTeaser.one() %}
+
  {{- atoms.atom('image', 'teaser',  {
             image: entry.imageTeaser.eagerly().collect.first,
             sizes: '30vw',
             placeholder: 'silhouette',
             loadingStrategy: 'eager',
         }) -}}
+    {% endif %}
     </a></h1>
   </article>
 {% endfor %}
