@@ -41,7 +41,7 @@
 {# Display the entries #}
 {% for entry in entries %}
   <article>
-    <a href="{{ entry.url }}">
+    <a href="{{ entry.url }}" title="{{ entry.title }}">
     {# {% if entry.imageTeaser.one() %}
         {{- atoms.atom('image', 'teaser',  {
             image: entry.imageTeaser.eagerly().collect.first,
@@ -57,7 +57,7 @@
         {{- atoms.atom('image', 'hero',  {
             image: entry.imageHero.eagerly().collect.first,
             sizes: '30vw',
-            placeholder: 'silhouette',
+            placeholder: 'image',
             loadingStrategy: 'eager',
             utilitiesImage: 'block max-h-[300px] w-auto object-contain',
             utilitiesPicture: 'max-h-[300px] flex items-center justify-center',
