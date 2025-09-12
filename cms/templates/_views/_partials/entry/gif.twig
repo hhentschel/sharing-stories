@@ -2,13 +2,13 @@
 
 {% set gifs = entry.imageContentGif.all() %}
 
-
  {% for gif in gifs %}
   <img
     src="{{gif.url}}"
     class="object-cover aspect-3/2"
     fetchpriority="high"
   >
+ <h2 class="ml-12">{{gif.title}}</h2>
 {% endfor %}
 
 {# {% for image in entry.imageContentGif %}
