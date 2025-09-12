@@ -13,6 +13,9 @@ settings:
         -
           - uid
           - 1ecc4fa4-7e2d-4364-b61c-3a77a8f22390 # Footer Content
+        -
+          - group
+          - General
   includeTableView: false
   maxEntries: 4
   minEntries: null
