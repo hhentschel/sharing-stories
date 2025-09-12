@@ -1,13 +1,13 @@
 {%- import '_macros/atomic' as atoms -%}
 
-<div class="container">
+<div class="container pt-12">
 {% if entry.title %}
 <div class=" bg-slate-200 p-6 rounded mt-6 mb-12">
     {{ entry.title }}
 </div>
 {% endif %}
 
-
+{% if entry.HomeContent %}
 <div class="grid grid-cols-2 gap-4 mt-16 mb-16">
      <div class="text-[18px]">
          {# {{- atoms.atom('image', 'hero',  {
@@ -25,6 +25,7 @@
          {{ entry.HomeContent2 }}
     </div>
 </div>
+{% endif %}
 
 {# <div class="homepage-grid gap-4 rounded mt-6 mb-12"> #}
 {# <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"> #}
