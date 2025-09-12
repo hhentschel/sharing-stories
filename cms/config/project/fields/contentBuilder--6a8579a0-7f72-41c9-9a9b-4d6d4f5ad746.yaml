@@ -88,6 +88,14 @@ settings:
         -
           - group
           - General
+    -
+      __assoc__:
+        -
+          - uid
+          - da131c94-f785-4729-ba1e-d27ff138f6a0 # 2 Spalten RichText
+        -
+          - group
+          - General
   includeTableView: false
   maxEntries: null
   minEntries: null

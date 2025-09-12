@@ -3,6 +3,7 @@ headingLevels:
   - 2
   - 3
   - 4
+js: "return {\r\n  link: {\r\n    addTargetToExternalLinks: false,\r\n    defaultProtocol: 'https://',\r\n    decorators: {\r\n      isExternal: {\r\n        mode: 'manual',\r\n        label: 'In einem neuen Tab öffnen',\r\n        attributes: {\r\n          target: '_blank'\r\n        }\r\n      }\r\n    }\r\n  }\r\n}"
 name: Simple
 toolbar:
   - heading

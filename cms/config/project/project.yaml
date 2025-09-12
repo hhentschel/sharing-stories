@@ -1,4 +1,4 @@
-dateModified: 1757704719
+dateModified: 1757716799
 elementSources:
   craft\elements\Entry:
     -
@@ -188,6 +188,7 @@ meta:
     ca82ce19-1d0f-494a-b0e9-79eab0ba3665: CTA # CTA
     cbacf1e2-321f-4024-a6b0-5159a7fa227c: 'ImageOptimize - Content' # ImageOptimize - Content
     ce11b004-8f79-48e1-b31b-dbcea3a241bb: Icon # Icon
+    da131c94-f785-4729-ba1e-d27ff138f6a0: '2 Spalten RichText' # 2 Spalten RichText
     db52a890-e4be-4edb-b995-2b4d3aee70a4: Überschrift # Überschrift
     e2f3b30c-2b00-465f-b42b-5b8e8e0ab107: 'Rich Text' # Rich Text
     e3a20fd6-f305-4542-8ad7-f6ed6607137d: 'ImageOptimize - Teaser' # ImageOptimize - Teaser

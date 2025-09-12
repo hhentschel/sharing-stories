@@ -36,6 +36,9 @@
                 {% case "richText" %}
                 {{ block.render() }}
 
+                {% case "DoubleColumnRichText" %}
+                {{ block.render() }}
+
                 {% case "iframe" %}
                 <div class="block">
                 {{ block.render() }}

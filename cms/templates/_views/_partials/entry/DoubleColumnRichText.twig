@@ -1,0 +1,27 @@
+{# {%- extends '_atoms/texts/_text--props' -%}
+{%- import '_macros/atomic' as atoms -%} #}
+
+{%- import '_macros/atomic' as atoms -%}
+
+<div class="grid grid-cols-2 gap-4 mb-6">
+{% if entry.title %}
+    <h3 class="mb-3">{{- atoms.atom('text', 'h3' , {
+        alignment: '',
+        content:  entry.title,
+        utilities: 'mb-12',
+    }) -}}</h3>
+{% endif %}
+
+   <div>
+    {{ entry.richText }}
+    </div>
+
+    <div>
+    {{ entry.richText2 }}
+    </div>
+</div>
+
+{# {{- atoms.atom('text', 'content', {
+    content: entry.richText,
+    utilities: '',
+}) -}} #}
