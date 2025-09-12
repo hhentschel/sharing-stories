@@ -16,6 +16,7 @@ return GeneralConfig::create()
         '@assetsUrl' => App::env('CRAFT_ASSETS_URL'),
         '@cloudfrontUrl' => App::env('CLOUDFRONT_URL'),
         '@web' => App::env('PRIMARY_SITE_URL'),
+        '@baseUrl' => App::env('PRIMARY_SITE_URL'),
         //
         '@webrootpath' => App::env('CRAFT_WEB_ROOT_PATH'),
         '@webroot' => App::env('CRAFT_WEB_ROOT'),

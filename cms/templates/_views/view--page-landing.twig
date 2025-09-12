@@ -9,13 +9,13 @@
     <img src="/content-files/images/content/arrow.png" alt="Pfeil nach links" class="inline w-[120px] mb-0"/>
 </a>
 
-        <h1 class="mb-6 mt-6">
+        {# <h1 class="mb-6 mt-6">
             {{- atoms.atom('text', 'h2' , {
                     alignment: '',
                     content:  spotlight,
                     utilities: '',
                 }) -}}
-        </h1>
+        </h1> #}
 
         {{- atoms.atom('image', 'teaser',  {
             image: entry.imageTeaser.eagerly().collect.first,

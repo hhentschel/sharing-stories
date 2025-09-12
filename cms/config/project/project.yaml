@@ -1,4 +1,4 @@
-dateModified: 1757676414
+dateModified: 1757702286
 elementSources:
   craft\elements\Entry:
     -
@@ -69,7 +69,7 @@ fs:
     settings:
       path: '@webroot/content-files/images/content'
     type: craft\fs\Local
-    url: '@web/content-files/images/content'
+    url: '@baseUrl/content-files/images/content'
   contentimages:
     hasUrls: true
     name: 'Content Images'
