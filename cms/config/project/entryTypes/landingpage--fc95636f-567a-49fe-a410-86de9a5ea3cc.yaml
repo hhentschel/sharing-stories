@@ -38,10 +38,10 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2025-09-10T05:38:30+00:00'
+            dateAdded: '2025-09-12T09:23:20+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: e57dd80e-fbbb-45c8-9086-b5a5368c2429 # Image Hero
+            fieldUid: 5ba7464f-2767-483b-8cdb-a89f28b8c6cf # Image Teaser
             handle: null
             includeInCards: false
             instructions: null
@@ -50,7 +50,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: dc5a9ad0-78ca-4b18-96c5-5e651db903ce
+            uid: e3329739-0a2d-4794-b037-1525f3a474ee
             userCondition: null
             warning: null
             width: 50

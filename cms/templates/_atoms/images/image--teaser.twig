@@ -3,7 +3,7 @@
 
 {%- block image -%}
 
-{%- set id = "content-#{random()}-#{props.get('image').id}" -%}
+{# {%- set id = "content-#{random()}-#{props.get('image').id}" -%} #}
 
 {%- set image = props.get('image') ??? null -%}
 {%- set caption = props.get('caption') ??? null -%}
@@ -20,7 +20,6 @@
   .pictureAttrs
     ({
        'class': props.get('utilitiesPicture'),
-       'id': id
     })
   .placeholder("#{props.get('placeholder')}")
   .loadingStrategy("#{props.get('loadingStrategy')}")

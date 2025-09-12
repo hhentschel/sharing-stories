@@ -6,7 +6,7 @@
 {# view-page-landing #}
 <div class="container mx-auto my-0 flex flex-col px-0 mt-12">
 <a href="/">
-    <img src="https://sharing-stories.ddev.site/content-files/images/content/josh-hild-K4WXehq5Alc-unsplash_2025-09-11-122653_wbev.jpg" alt="Pfeil nach links" class="inline w-44 h-12 mb-12"/>
+    <img src="https://sharing-stories.net/content-files/images/content/arrow.png" alt="Pfeil nach links" class="inline w-[120px] mb-0"/>
 </a>
 
         <h1 class="mb-12 mt-6">
@@ -17,6 +17,13 @@
 
                 }) -}}
         </h1>
+
+        {{- atoms.atom('image', 'teaser',  {
+            image: entry.imageTeaser.eagerly().collect.first,
+            sizes: '30vw',
+            placeholder: 'silhouette',
+            loadingStrategy: 'eager',
+        }) -}}
 
          {# {{ entry.contentBuilder }} #}
         {% for block in entry.contentBuilder.all() %}

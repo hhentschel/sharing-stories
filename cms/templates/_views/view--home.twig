@@ -40,12 +40,12 @@
 {% for entry in entries %}
   <article>
     <h1><a href="{{ entry.url }}">{{ entry.title }}
-         {{- atoms.atom('image', 'hero',  {
-                image: entry.imageHero.eagerly().collect.first,
-                sizes: '30vw',
-                placeholder: 'silhouette',
-                loadingStrategy: 'eager',
-            }) -}}
+ {{- atoms.atom('image', 'teaser',  {
+            image: entry.imageTeaser.eagerly().collect.first,
+            sizes: '30vw',
+            placeholder: 'silhouette',
+            loadingStrategy: 'eager',
+        }) -}}
     </a></h1>
   </article>
 {% endfor %}
