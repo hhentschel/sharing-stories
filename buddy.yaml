@@ -48,6 +48,8 @@
       compress: true
       deployment_excludes:
         - "/.git/"
+        - "/web/content-files/"
+        - "/web/cpresources/"
       trigger_condition: "ALWAYS"
     - action: "Atomic deploy"
       type: "SSH_COMMAND"
@@ -71,9 +73,13 @@
         - 'echo "Creating: persistent directories and files"'
         - "touch .env"
         - "mkdir -p storage"
+        - "mkdir -p web/content-files"
+        - "mkdir -p web/cpresources"
         - 'echo "Symlinking: persistent files & directories"'
         - "ln -nfs $REMOTE_PROJECT_ROOT/.env $REMOTE_PROJECT_ROOT/releases/$BUDDY_EXECUTION_REVISION"
         - "ln -nfs $REMOTE_PROJECT_ROOT/storage $REMOTE_PROJECT_ROOT/releases/$BUDDY_EXECUTION_REVISION"
+        - "ln -nfs $REMOTE_PROJECT_ROOT/web/content-files $REMOTE_PROJECT_ROOT/releases/$BUDDY_EXECUTION_REVISION/web/content-files"
+        - "ln -nfs $REMOTE_PROJECT_ROOT/web/cpresources $REMOTE_PROJECT_ROOT/releases/$BUDDY_EXECUTION_REVISION/web/cpresources"
         - 'echo "Linking current to revision: $BUDDY_EXECUTION_REVISION"'
         - "rm -f current"
         - "ln -s releases/$BUDDY_EXECUTION_REVISION current"
