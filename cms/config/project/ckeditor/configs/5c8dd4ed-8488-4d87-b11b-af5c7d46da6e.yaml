@@ -16,7 +16,7 @@ toolbar:
   - italic
   - link
   - insertImage
-  - highlight
   - blockQuote
   - codeBlock
   - sourceEditing
+  - bulletedList
