@@ -3,20 +3,20 @@
 
 {%- import '_macros/atomic' as atoms -%}
 
-<div class="grid grid-cols-2 gap-4 mb-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
 {% if entry.title %}
-    <h3 class="mb-3">{{- atoms.atom('text', 'h3' , {
+    <h3 class="col-span-full mb-3">{{- atoms.atom('text', 'h3' , {
         alignment: '',
         content:  entry.title,
         utilities: 'mb-12',
     }) -}}</h3>
 {% endif %}
 
-   <div>
+   <div class="break-words ">
     {{ entry.richText }}
     </div>
 
-    <div>
+    <div class="break-words">
     {{ entry.richText2 }}
     </div>
 </div>
