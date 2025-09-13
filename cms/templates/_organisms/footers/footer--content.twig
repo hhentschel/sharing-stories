@@ -34,7 +34,9 @@
                             <h3 class="footer__headline">
                                 {{ column.heading }}
                             </h3>
+                             {% if craft.app.request.pathInfo == 'project' %}
                                 {{ column.richText }}
+                            {% endif %}
                         </div>
                     {% endfor %}
                 </div>
